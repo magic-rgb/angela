@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angel Coin — Next‑Gen Digital Currency</title>
 
+  <!-- ===== Fonts & Icons ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ===== External CSS ===== -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ===== Three.js ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- ===== GSAP & ScrollTrigger ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- ===== External JavaScript ===== -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== THREE.JS BACKGROUND ===== -->
+  <div id="particles-canvas"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container header-inner">
+      <div class="logo">ANGEL <span>COIN</span></div>
+      <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#why">Why</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#security">Security</a>
+        <a href="#community">Community</a>
+        <a href="#" class="btn btn-outline">Buy $ANGEL</a>
+        <a href="#" class="btn btn-primary">Whitepaper</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>ANGEL COIN</h1>
+      <p class="subhead">
+        Building a Better Tomorrow with Blockchain Innovation.<br />
+        <span class="highlight">Angel Coin</span> – security, transparency, and community power for a limitless future.
+      </p>
+      <div class="hero-btns">
+        <a href="#" class="btn btn-primary">Buy $ANGEL</a>
+        <a href="#" class="btn btn-outline">Whitepaper</a>
+      </div>
+      <div style="margin-top: 30px; font-size: 18px; color: var(--text-muted);">
+        <span id="typed-text"></span><span class="typed-cursor"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JOIN COMMUNITY BANNER ===== -->
+  <section style="padding: 20px 0 40px; background: rgba(249,184,58,0.03); border-bottom: none;">
+    <div class="container" style="text-align:center;">
+      <h3 style="font-size:28px; font-weight:600;">Join the Angel Community</h3>
+      <p style="color:var(--text-muted); max-width:500px; margin:8px auto 24px;">Be part of a global movement shaping the future of decentralized finance.</p>
+      <a href="#" class="btn btn-primary">Join Community <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
+    </div>
+  </section>
+
+  <!-- ===== WHY ANGEL COIN ===== -->
+  <section id="why">
+    <div class="container">
+      <h2 class="section-title">Why <span class="gold">Angel Coin</span>?</h2>
+      <p class="section-sub">A Decentralized Future, Built for Everyone</p>
+      <div class="why-grid" id="whyGrid">
+        <div class="why-card" data-tilt><i class="fas fa-link"></i><h3>Decentralized</h3><p>Powered by blockchain for a trustless future.</p></div>
+        <div class="why-card" data-tilt><i class="fas fa-shield-alt"></i><h3>Secure</h3><p>Audited by top security firms and verified.</p></div>
+        <div class="why-card" data-tilt><i class="fas fa-bolt"></i><h3>Lightning Fast</h3><p>High‑speed transactions with near‑zero fees.</p></div>
+        <div class="why-card" data-tilt><i class="fas fa-expand"></i><h3>Scalable</h3><p>Built for mass adoption and real‑world use.</p></div>
+        <div class="why-card" data-tilt><i class="fas fa-users"></i><h3>Community Driven</h3><p>Governed by a strong and active community.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOKENOMICS ===== -->
+  <section id="tokenomics">
+    <div class="container">
+      <h2 class="section-title">Tokenomics</h2>
+      <p class="section-sub">$ANGEL – transparent distribution</p>
+      <div class="tokenomics-wrap">
+        <div class="token-chart" id="tokenChart"></div>
+        <div class="token-list">
+          <div class="token-item"><span class="token-color" style="background:#f9b83a;"></span><span><span class="perc">40%</span> Community & Rewards</span></div>
+          <div class="token-item"><span class="token-color" style="background:#3b82f6;"></span><span><span class="perc">20%</span> Liquidity & Exchange</span></div>
+          <div class="token-item"><span class="token-color" style="background:#22d3ee;"></span><span><span class="perc">15%</span> Marketing & Partnerships</span></div>
+          <div class="token-item"><span class="token-color" style="background:#a78bfa;"></span><span><span class="perc">10%</span> Development</span></div>
+          <div class="token-item"><span class="token-color" style="background:#f472b6;"></span><span><span class="perc">10%</span> Advisory & Reserves</span></div>
+          <div class="token-item"><span class="token-color" style="background:#34d399;"></span><span><span class="perc">5%</span> Advisors & Reserved</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section id="roadmap">
+    <div class="container">
+      <h2 class="section-title">Roadmap</h2>
+      <p class="section-sub">Our Journey to a Greater Future</p>
+      <div class="roadmap-timeline" id="roadmapTimeline">
+        <div class="roadmap-item"><div class="dot"></div><div class="roadmap-card"><h4>Q2 2024</h4><h5>Foundation</h5><ul><li>Project Launch</li><li>Website Live</li><li>Community Building</li><li>Smart Contract Audit</li></ul></div></div>
+        <div class="roadmap-item"><div class="dot"></div><div class="roadmap-card"><h4>Q3 2024</h4><h5>Development</h5><ul><li>dApp Development</li><li>Staking Platform</li><li>Listing on DEX</li><li>Partnerships</li></ul></div></div>
+        <div class="roadmap-item"><div class="dot"></div><div class="roadmap-card"><h4>Q4 2024</h4><h5>Expansion</h5><ul><li>CEX Listings</li><li>Mobile App</li><li>Global Marketing</li><li>More Partnerships</li></ul></div></div>
+        <div class="roadmap-item"><div class="dot"></div><div class="roadmap-card"><h4>Q1 2025</h4><h5>Mass Adoption</h5><ul><li>Ecosystem Growth</li><li>Real World Utility</li><li>DAO Governance</li><li>Continuous Expansion</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECURITY ===== -->
+  <section id="security">
+    <div class="container">
+      <div class="security-box">
+        <h3>🔒 Security Is Our Priority</h3>
+        <p><strong>Audited. Verified. Trusted.</strong><br />Angel Coin is protected by leading blockchain security companies to ensure the highest level of safety.</p>
+        <div class="security-badges">
+          <span><i class="fas fa-check-circle"></i> CertiK</span>
+          <span><i class="fas fa-check-circle"></i> SolidProof</span>
+          <span><i class="fas fa-check-circle"></i> Hacken</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ECOSYSTEM ===== -->
+  <section style="border-bottom: 1px solid rgba(255,255,255,0.03);">
+    <div class="container">
+      <h2 class="section-title" style="font-size:32px;">Angel Coin <span class="gold">Ecosystem</span></h2>
+      <div class="eco-slider" id="ecosystemSlider">
+        <span><i class="fas fa-link"></i> Chainlink</span>
+        <span><i class="fas fa-cube"></i> Polygon</span>
+        <span><i class="fas fa-coins"></i> PancakeSwap</span>
+        <span><i class="fas fa-shield"></i> CERTIK</span>
+        <span><i class="fas fa-check"></i> SOLIDProof</span>
+        <span><i class="fas fa-exchange-alt"></i> CoinSwitch</span>
+        <span><i class="fas fa-wallet"></i> Trust Wallet</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMUNITY & NEWS ===== -->
+  <section id="community">
+    <div class="container">
+      <h2 class="section-title">Join Our <span class="gold">Community</span></h2>
+      <p class="section-sub">Be part of our global community and stay updated with the latest news.</p>
+      <div class="community-grid">
+        <div class="community-card"><i class="fab fa-discord"></i><h4>Discord</h4><p>Chat with the team and fellow angels.</p><a href="#" class="btn btn-outline" style="margin-top:16px;">Join</a></div>
+        <div class="community-card"><i class="fab fa-telegram-plane"></i><h4>Telegram</h4><p>Get instant updates and announcements.</p><a href="#" class="btn btn-outline" style="margin-top:16px;">Join</a></div>
+        <div class="community-card"><i class="fab fa-twitter"></i><h4>Twitter</h4><p>Follow us for the latest news.</p><a href="#" class="btn btn-outline" style="margin-top:16px;">Follow</a></div>
+      </div>
+
+      <div class="news-list">
+        <h3 style="font-size:26px; text-align:center; margin-bottom:24px;">Latest News</h3>
+        <div class="news-item"><span class="date">May 20, 2024</span><span class="title">Angel Coin Successfully Listed on Major DEX</span></div>
+        <div class="news-item"><span class="date">May 10, 2024</span><span class="title">Partnership with Leading Blockchain Security Firms</span></div>
+      </div>
+
+      <div class="binance-badge">
+        <span><i class="fab fa-binance"></i> BINANCE LABS</span>
+        <small>Proud partner in innovation</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APP DOWNLOAD ===== -->
+  <section class="app-section">
+    <div class="container">
+      <h2 class="section-title">Get the <span class="gold">Angel Coin App</span></h2>
+      <p style="color:var(--text-muted); max-width:500px; margin:0 auto 20px;">Experience Angel Coin on the go. Available on iOS & Android.</p>
+      <div class="app-buttons">
+        <a href="#" class="btn btn-white"><i class="fab fa-apple"></i> App Store</a>
+        <a href="#" class="btn btn-white"><i class="fab fa-google-play"></i> Google Play</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>A New Era of Financial Freedom</h2>
+      <p>Join the Angel Coin revolution and be part of a better, brighter future.</p>
+      <a href="#" class="btn btn-primary" style="padding:18px 56px; font-size:20px;">Get Started</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Angel Coin. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
