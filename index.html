@@ -2,207 +2,476 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Angel Coin — Next‑Gen Digital Currency</title>
-
-  <!-- ===== Fonts & Icons ===== -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- ===== External CSS ===== -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- ===== Three.js ===== -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-  <!-- ===== GSAP & ScrollTrigger ===== -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- ===== External JavaScript ===== -->
-  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>ANGELA — The Next Intelligent Value Infrastructure</title>
+  <meta name="description" content="ANGELA is the next-generation intelligent digital asset infrastructure combining AI, blockchain and global digital economies into one premium ecosystem on Solana." />
+  <meta name="theme-color" content="#030308" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://angela.network/" />
+  <meta property="og:title" content="ANGELA — The Next Intelligent Value Infrastructure" />
+  <meta property="og:description" content="Beyond imagination. Beyond limits. Built for the next era." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- ===== THREE.JS BACKGROUND ===== -->
-  <div id="particles-canvas"></div>
-
-  <!-- ===== HEADER ===== -->
-  <header id="header">
-    <div class="container header-inner">
-      <div class="logo">ANGEL <span>COIN</span></div>
-      <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
+  <!-- LOADER -->
+  <div id="loader" class="loader" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Loading ANGELA World">
+    <div class="loader-bg" aria-hidden="true"></div>
+    <div class="loader-content">
+      <div class="loader-logo-wrap" aria-hidden="true">
+        <div class="energy-rings">
+          <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
+        </div>
+        <div class="crystal-core">
+          <svg viewBox="0 0 120 140" fill="none" class="mother-logo">
+            <defs>
+              <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE9A0"/><stop offset="45%" stop-color="#F5C542"/><stop offset="100%" stop-color="#C9A227"/>
+              </linearGradient>
+              <filter id="gGlow"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <path d="M60 25 L35 55 L42 58 L60 40 L78 58 L85 55 Z" fill="url(#gGold)" filter="url(#gGlow)"/>
+            <path d="M60 40 L25 70 L32 75 L60 52 L88 75 L95 70 Z" fill="url(#gGold)" opacity=".9" filter="url(#gGlow)"/>
+            <path d="M60 52 L20 85 L28 92 L60 68 L92 92 L100 85 Z" fill="url(#gGold)" opacity=".75" filter="url(#gGlow)"/>
+            <path d="M60 55 L50 75 L60 95 L70 75 Z" fill="url(#gGold)" filter="url(#gGlow)"/>
+            <path d="M60 62 L54 75 L60 88 L66 75 Z" fill="#FFF8DC" opacity=".55"/>
+          </svg>
+        </div>
+        <div class="beam"></div>
       </div>
-      <nav class="nav-links" id="navLinks">
-        <a href="#why">Why</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#security">Security</a>
-        <a href="#community">Community</a>
-        <a href="#" class="btn btn-outline">Buy $ANGEL</a>
-        <a href="#" class="btn btn-primary">Whitepaper</a>
+      <div class="loader-brand">
+        <h1 class="loader-title">ANGELA</h1>
+        <p class="loader-tagline">THE NEXT INTELLIGENT VALUE INFRASTRUCTURE</p>
+      </div>
+      <div class="loader-steps" aria-live="polite">
+        <div class="step" data-s="1"><div class="step-icon" aria-hidden="true">◉</div><span>CONNECTING TO ANGELA NETWORK</span><div class="step-status"></div></div>
+        <div class="step" data-s="2"><div class="step-icon" aria-hidden="true">AI</div><span>SYNCHRONIZING AI CORE SYSTEMS</span><div class="step-status"></div></div>
+        <div class="step" data-s="3"><div class="step-icon" aria-hidden="true">🛡</div><span>VERIFYING SECURITY PROTOCOLS</span><div class="step-status"></div></div>
+        <div class="step" data-s="4"><div class="step-icon" aria-hidden="true">⬡</div><span>ACCESSING BLOCKCHAIN LAYER</span><div class="step-status"></div></div>
+        <div class="step" data-s="5"><div class="step-icon" aria-hidden="true">✦</div><span>UNLOCKING ANGELA WORLD</span><div class="step-status"></div></div>
+      </div>
+      <div class="loader-progress-wrap">
+        <div class="loader-label">LOADING ANGELA WORLD</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-pct" id="progressPct">0%</div>
+      </div>
+      <p class="loader-footer">BUILDING THE FUTURE. TOGETHER.</p>
+      <p class="scroll-hint">CLICK ANYWHERE TO ENTER</p>
+    </div>
+  </div>
+
+  <div id="app" class="app is-hidden">
+    <header class="header" id="header">
+      <div class="header-inner">
+        <a href="#hero" class="logo-link" aria-label="ANGELA Home">
+          <svg class="header-logo" viewBox="0 0 40 48" fill="none" aria-hidden="true">
+            <defs><linearGradient id="hG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFE9A0"/><stop offset="50%" stop-color="#F5C542"/><stop offset="100%" stop-color="#C9A227"/></linearGradient></defs>
+            <path d="M20 4 L10 16 L13 18 L20 10 L27 18 L30 16 Z" fill="url(#hG)"/>
+            <path d="M20 10 L6 24 L10 27 L20 16 L30 27 L34 24 Z" fill="url(#hG)" opacity=".9"/>
+            <path d="M20 16 L4 32 L9 36 L20 24 L31 36 L36 32 Z" fill="url(#hG)" opacity=".7"/>
+            <path d="M20 20 L15 30 L20 40 L25 30 Z" fill="url(#hG)"/>
+          </svg>
+          <div class="logo-text">
+            <span class="logo-name">ANGELA</span>
+            <span class="logo-sub">THE NEXT INTELLIGENT VALUE INFRASTRUCTURE</span>
+          </div>
+        </a>
+        <nav class="nav" id="mainNav" aria-label="Primary">
+          <a href="#hero">HOME</a>
+          <a href="#vision">VISION</a>
+          <a href="#ecosystem">ECOSYSTEM</a>
+          <a href="#tokenomics">TOKENOMICS</a>
+          <a href="#roadmap">ROADMAP</a>
+          <a href="#security">SECURITY</a>
+          <a href="#docs">WHITEPAPER</a>
+        </nav>
+        <div class="header-actions">
+          <a href="#ecosystem" class="btn-enter">ENTER ANGELA →</a>
+          <button type="button" class="btn-menu" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile" hidden>
+        <a href="#hero">HOME</a><a href="#vision">VISION</a><a href="#ecosystem">ECOSYSTEM</a>
+        <a href="#tokenomics">TOKENOMICS</a><a href="#roadmap">ROADMAP</a><a href="#security">SECURITY</a>
+        <a href="#docs">WHITEPAPER</a>
+        <a href="#ecosystem" class="btn-enter mobile-enter">ENTER ANGELA →</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <h1>ANGEL COIN</h1>
-      <p class="subhead">
-        Building a Better Tomorrow with Blockchain Innovation.<br />
-        <span class="highlight">Angel Coin</span> – security, transparency, and community power for a limitless future.
-      </p>
-      <div class="hero-btns">
-        <a href="#" class="btn btn-primary">Buy $ANGEL</a>
-        <a href="#" class="btn btn-outline">Whitepaper</a>
-      </div>
-      <div style="margin-top: 30px; font-size: 18px; color: var(--text-muted);">
-        <span id="typed-text"></span><span class="typed-cursor"></span>
-      </div>
-    </div>
-  </section>
+    <main id="main">
+      <!-- HERO -->
+      <section id="hero" class="hero" aria-labelledby="hero-title">
+        <div class="hero-canvas-wrap" aria-hidden="true">
+          <canvas id="heroCanvas"></canvas>
+          <div id="threeContainer" class="three-container"></div>
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="hero-left">
+            <p class="hero-eyebrow">WELCOME TO THE NEXT ERA OF VALUE</p>
+            <h1 id="hero-title" class="hero-title">ANGELA</h1>
+            <p class="hero-tagline">BEYOND IMAGINATION.<br>BEYOND LIMITS.<br>BUILT FOR THE NEXT ERA.</p>
+            <p class="hero-desc">ANGELA is the next generation infrastructure on Solana, empowering a limitless future with intelligence, security and real-world value.</p>
+            <div class="hero-ctas">
+              <a href="#ecosystem" class="btn-primary">EXPLORE ANGELA →</a>
+              <a href="#docs" class="btn-secondary">WHITEPAPER</a>
+            </div>
+          </div>
+          <div class="hero-center" aria-hidden="true">
+            <div class="crystal-fallback" id="crystalFallback">
+              <div class="crystal-glow"></div>
+              <div class="crystal-body">
+                <svg class="crystal-logo" viewBox="0 0 120 140" fill="none">
+                  <defs><linearGradient id="cG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFE9A0"/><stop offset="40%" stop-color="#F5C542"/><stop offset="100%" stop-color="#C9A227"/></linearGradient></defs>
+                  <path d="M60 25 L35 55 L42 58 L60 40 L78 58 L85 55 Z" fill="url(#cG)"/>
+                  <path d="M60 40 L25 70 L32 75 L60 52 L88 75 L95 70 Z" fill="url(#cG)" opacity=".9"/>
+                  <path d="M60 52 L20 85 L28 92 L60 68 L92 92 L100 85 Z" fill="url(#cG)" opacity=".75"/>
+                  <path d="M60 55 L50 75 L60 95 L70 75 Z" fill="url(#cG)"/>
+                  <path d="M60 62 L54 75 L60 88 L66 75 Z" fill="#FFF8DC" opacity=".55"/>
+                </svg>
+              </div>
+              <div class="crystal-rings"><div class="c-ring"></div><div class="c-ring"></div><div class="c-ring"></div></div>
+              <div class="crystal-base"></div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="live-panel glass" role="region" aria-label="Live network statistics">
+              <div class="live-header"><span class="live-dot" aria-hidden="true"></span><span>LIVE ANGELA NETWORK</span></div>
+              <p class="live-sub">THE FUTURE IS ALREADY BUILDING</p>
+              <div class="live-globe" aria-hidden="true"></div>
+              <div class="live-stats">
+                <div class="live-stat"><span class="label">TOTAL SUPPLY</span><span class="value">1,000,000,000</span><span class="unit">ANGELA</span></div>
+                <div class="live-stat"><span class="label">HOLDERS</span><span class="value">1.38M+</span></div>
+                <div class="live-stat"><span class="label">TRANSACTIONS</span><span class="value">45.18M+</span></div>
+                <div class="live-stat"><span class="label">MARKET CAP</span><span class="value">$178.71M</span></div>
+                <div class="live-stat"><span class="label">NETWORK</span><span class="value">SOLANA</span></div>
+              </div>
+              <p class="live-footer">SECURED. DECENTRALIZED. LIMITLESS.</p>
+            </div>
+          </div>
+        </div>
 
-  <!-- ===== JOIN COMMUNITY BANNER ===== -->
-  <section style="padding: 20px 0 40px; background: rgba(249,184,58,0.03); border-bottom: none;">
-    <div class="container" style="text-align:center;">
-      <h3 style="font-size:28px; font-weight:600;">Join the Angel Community</h3>
-      <p style="color:var(--text-muted); max-width:500px; margin:8px auto 24px;">Be part of a global movement shaping the future of decentralized finance.</p>
-      <a href="#" class="btn btn-primary">Join Community <i class="fas fa-arrow-right" style="margin-left:8px;"></i></a>
-    </div>
-  </section>
+        <!-- Hero module cards (matching mockup) -->
+        <div class="hero-modules" id="heroModules" role="list" aria-label="Ecosystem modules"></div>
 
-  <!-- ===== WHY ANGEL COIN ===== -->
-  <section id="why">
-    <div class="container">
-      <h2 class="section-title">Why <span class="gold">Angel Coin</span>?</h2>
-      <p class="section-sub">A Decentralized Future, Built for Everyone</p>
-      <div class="why-grid" id="whyGrid">
-        <div class="why-card" data-tilt><i class="fas fa-link"></i><h3>Decentralized</h3><p>Powered by blockchain for a trustless future.</p></div>
-        <div class="why-card" data-tilt><i class="fas fa-shield-alt"></i><h3>Secure</h3><p>Audited by top security firms and verified.</p></div>
-        <div class="why-card" data-tilt><i class="fas fa-bolt"></i><h3>Lightning Fast</h3><p>High‑speed transactions with near‑zero fees.</p></div>
-        <div class="why-card" data-tilt><i class="fas fa-expand"></i><h3>Scalable</h3><p>Built for mass adoption and real‑world use.</p></div>
-        <div class="why-card" data-tilt><i class="fas fa-users"></i><h3>Community Driven</h3><p>Governed by a strong and active community.</p></div>
-      </div>
-    </div>
-  </section>
+        <!-- Darkness / Light bar -->
+        <div class="theme-bar" aria-hidden="true">
+          <div class="theme-side dark-side">
+            <span class="theme-label">DARKNESS</span>
+            <span class="theme-sub">The unknown holds you back.</span>
+          </div>
+          <div class="theme-center">
+            <div class="theme-logo">✦</div>
+          </div>
+          <div class="theme-side light-side">
+            <span class="theme-label">LIGHT</span>
+            <span class="theme-sub">The future is yours to build.</span>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"><span>SCROLL TO ENTER THE WORLD OF ANGELA</span><div class="scroll-arrow">↓</div></div>
+      </section>
 
-  <!-- ===== TOKENOMICS ===== -->
-  <section id="tokenomics">
-    <div class="container">
-      <h2 class="section-title">Tokenomics</h2>
-      <p class="section-sub">$ANGEL – transparent distribution</p>
-      <div class="tokenomics-wrap">
-        <div class="token-chart" id="tokenChart"></div>
-        <div class="token-list">
-          <div class="token-item"><span class="token-color" style="background:#f9b83a;"></span><span><span class="perc">40%</span> Community & Rewards</span></div>
-          <div class="token-item"><span class="token-color" style="background:#3b82f6;"></span><span><span class="perc">20%</span> Liquidity & Exchange</span></div>
-          <div class="token-item"><span class="token-color" style="background:#22d3ee;"></span><span><span class="perc">15%</span> Marketing & Partnerships</span></div>
-          <div class="token-item"><span class="token-color" style="background:#a78bfa;"></span><span><span class="perc">10%</span> Development</span></div>
-          <div class="token-item"><span class="token-color" style="background:#f472b6;"></span><span><span class="perc">10%</span> Advisory & Reserves</span></div>
-          <div class="token-item"><span class="token-color" style="background:#34d399;"></span><span><span class="perc">5%</span> Advisors & Reserved</span></div>
+      <!-- VISION -->
+      <section id="vision" class="section vision-section" aria-labelledby="vision-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="vision-title">VISION</h2>
+            <p>A clear vision of a limitless future driven by intelligence, innovation and humanity.</p>
+          </div>
+          <div class="vision-grid">
+            <article class="vision-card glass">
+              <div class="v-icon" aria-hidden="true">◈</div>
+              <h3>Intelligent Infrastructure</h3>
+              <p>ANGELA unifies AI decision systems, secure blockchain settlement and real-world economic utility into one intelligent value layer.</p>
+            </article>
+            <article class="vision-card glass">
+              <div class="v-icon" aria-hidden="true">◎</div>
+              <h3>Civilization Scale</h3>
+              <p>Built for institutions, builders and communities who demand cinematic experience and institutional-grade trust.</p>
+            </article>
+            <article class="vision-card glass">
+              <div class="v-icon" aria-hidden="true">✦</div>
+              <h3>Silent Power</h3>
+              <p>Luxury technology with scientific precision — not another token, an evolving digital civilization.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ECOSYSTEM MAP -->
+      <section id="ecosystem" class="section ecosystem-section" aria-labelledby="eco-title">
+        <div class="section-header">
+          <h2 id="eco-title">ANGELA ECOSYSTEM</h2>
+          <p>Ten pillars powering the intelligent asset infrastructure</p>
+        </div>
+        <div class="eco-map">
+          <div class="eco-center" aria-hidden="true">
+            <div class="eco-crystal">✦</div>
+          </div>
+          <div class="eco-modules" id="ecoModules" role="list"></div>
+        </div>
+        <div class="eco-metrics" role="list">
+          <div class="metric" role="listitem"><span class="m-label">TOTAL VALUE LOCKED</span><span class="m-value" data-count="1.28">$1.28B+</span></div>
+          <div class="metric" role="listitem"><span class="m-label">TOTAL USERS</span><span class="m-value" data-count="1.38">1.38M+</span></div>
+          <div class="metric" role="listitem"><span class="m-label">COUNTRIES</span><span class="m-value" data-count="156">156+</span></div>
+          <div class="metric" role="listitem"><span class="m-label">TRANSACTIONS</span><span class="m-value" data-count="24.7">24.7M+</span></div>
+          <div class="metric" role="listitem"><span class="m-label">NETWORK UPTIME</span><span class="m-value">99.99%</span></div>
+        </div>
+      </section>
+
+      <!-- TOKENOMICS -->
+      <section id="tokenomics" class="section token-section" aria-labelledby="token-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="token-title">TOKEN ECONOMY</h2>
+            <p>Utility-driven design for sustainable long-term value</p>
+          </div>
+          <div class="token-grid">
+            <div class="token-utility glass">
+              <h3>ANGELA Token Utility</h3>
+              <ul class="utility-list">
+                <li><span class="u-icon" aria-hidden="true">◇</span><div><strong>Ecosystem Access</strong><p>Gate premium modules, data feeds and AI services.</p></div></li>
+                <li><span class="u-icon" aria-hidden="true">◇</span><div><strong>Governance</strong><p>Vote on protocol upgrades, treasury and parameters.</p></div></li>
+                <li><span class="u-icon" aria-hidden="true">◇</span><div><strong>Rewards</strong><p>Earn from staking, liquidity and contribution.</p></div></li>
+                <li><span class="u-icon" aria-hidden="true">◇</span><div><strong>Payments</strong><p>Native medium for fees and value transfer.</p></div></li>
+                <li><span class="u-icon" aria-hidden="true">◇</span><div><strong>Future Applications</strong><p>RWA bridges, AI compute and institutional products.</p></div></li>
+              </ul>
+            </div>
+            <div class="token-dashboard glass">
+              <h3>Tokenomics Dashboard</h3>
+              <div class="supply-total"><span class="label">TOTAL SUPPLY</span><span class="value">1,000,000,000 ANGELA</span></div>
+              <div class="dist-rings" aria-hidden="true">
+                <div class="dist-ring" style="border-color:#F5C542"><strong>35%</strong><span>Community</span></div>
+                <div class="dist-ring" style="border-color:#E8B923"><strong>20%</strong><span>Ecosystem</span></div>
+                <div class="dist-ring" style="border-color:#D4A017"><strong>15%</strong><span>Treasury</span></div>
+              </div>
+              <div class="dist-chart" role="img" aria-label="Token distribution bars">
+                <div class="dist-bar" style="--pct:35;--color:#F5C542"><span>Community 35%</span></div>
+                <div class="dist-bar" style="--pct:20;--color:#E8B923"><span>Ecosystem 20%</span></div>
+                <div class="dist-bar" style="--pct:15;--color:#D4A017"><span>Treasury 15%</span></div>
+                <div class="dist-bar" style="--pct:12;--color:#C9A227"><span>Development 12%</span></div>
+                <div class="dist-bar" style="--pct:10;--color:#B8860B"><span>Liquidity 10%</span></div>
+                <div class="dist-bar" style="--pct:8;--color:#A67C00"><span>Team 8%</span></div>
+              </div>
+              <div class="token-table-wrap">
+                <p id="token-table-desc" class="token-table-desc">
+                  Breakdown of the 1,000,000,000 ANGELA total supply by allocation, share, token amount, and vesting schedule.
+                </p>
+                <table class="token-table" aria-describedby="token-table-desc">
+                  <caption>ANGELA token allocation and vesting</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Allocation</th>
+                      <th scope="col" class="num">Share</th>
+                      <th scope="col" class="num">Amount (tokens)</th>
+                      <th scope="col">Vesting schedule</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <span class="swatch" style="--c:#F5C542" aria-hidden="true"></span>
+                        Community
+                      </th>
+                      <td class="num">35%</td>
+                      <td class="num">350,000,000</td>
+                      <td>Unlocked at TGE</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="swatch" style="--c:#E8B923" aria-hidden="true"></span>
+                        Ecosystem
+                      </th>
+                      <td class="num">20%</td>
+                      <td class="num">200,000,000</td>
+                      <td>36 months linear</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="swatch" style="--c:#D4A017" aria-hidden="true"></span>
+                        Treasury
+                      </th>
+                      <td class="num">15%</td>
+                      <td class="num">150,000,000</td>
+                      <td>Multi-sig controlled</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="swatch" style="--c:#C9A227" aria-hidden="true"></span>
+                        Development
+                      </th>
+                      <td class="num">12%</td>
+                      <td class="num">120,000,000</td>
+                      <td>24 months cliff + linear</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="swatch" style="--c:#B8860B" aria-hidden="true"></span>
+                        Liquidity
+                      </th>
+                      <td class="num">10%</td>
+                      <td class="num">100,000,000</td>
+                      <td>DEX / CEX reserves</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">
+                        <span class="swatch" style="--c:#A67C00" aria-hidden="true"></span>
+                        Team
+                      </th>
+                      <td class="num">8%</td>
+                      <td class="num">80,000,000</td>
+                      <td>12m cliff, 36m linear</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th scope="row">Total supply</th>
+                      <td class="num">100%</td>
+                      <td class="num">1,000,000,000</td>
+                      <td><span class="sr-only">Not applicable</span><span aria-hidden="true">—</span></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECURITY -->
+      <section id="security" class="section security-section" aria-labelledby="sec-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="sec-title">TRUST &amp; SECURITY</h2>
+            <p>Enterprise-grade protection with real-time monitoring</p>
+          </div>
+          <div class="sec-grid">
+            <article class="sec-card glass"><div class="sec-icon" aria-hidden="true">⬡</div><h3>Smart Contracts</h3><p>Verified source, public addresses and continuous monitoring.</p></article>
+            <article class="sec-card glass"><div class="sec-icon" aria-hidden="true">🛡</div><h3>Security Architecture</h3><p>Formal methods, runtime guards, anomaly detection and circuit breakers.</p></article>
+            <article class="sec-card glass"><div class="sec-icon" aria-hidden="true">◎</div><h3>Transparency</h3><p>On-chain treasury and open documentation of every material change.</p></article>
+            <article class="sec-card glass"><div class="sec-icon" aria-hidden="true">✓</div><h3>Audits</h3><p>Independent third-party audits with public reports.</p></article>
+            <article class="sec-card glass"><div class="sec-icon" aria-hidden="true">🌐</div><h3>Decentralization</h3><p>Progressive decentralization with multi-sig and community governance.</p></article>
+            <article class="sec-card glass highlight"><div class="sec-icon" aria-hidden="true">◈</div><h3>Command Center</h3><p>Live threat monitoring and 24/7 network health.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROADMAP -->
+      <section id="roadmap" class="section roadmap-section" aria-labelledby="road-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="road-title">ROADMAP</h2>
+            <p>Clear path. Real progress.</p>
+          </div>
+          <div class="roadmap-timeline">
+            <div class="phase"><div class="phase-num">01</div><div class="phase-content glass"><h3>Foundation</h3><ul><li>Core protocol design</li><li>AI core research</li><li>Security model</li><li>Token & legal structure</li></ul></div></div>
+            <div class="phase"><div class="phase-num">02</div><div class="phase-content glass"><h3>Technology</h3><ul><li>Mainnet on Solana</li><li>AI routing live</li><li>Wallet & staking</li><li>First audits</li></ul></div></div>
+            <div class="phase"><div class="phase-num">03</div><div class="phase-content glass"><h3>Expansion</h3><ul><li>Partner integrations</li><li>Developer SDK</li><li>Liquidity programs</li><li>Governance activation</li></ul></div></div>
+            <div class="phase"><div class="phase-num">04</div><div class="phase-content glass"><h3>Global Adoption</h3><ul><li>Institutional products</li><li>Cross-chain expansion</li><li>Full decentralization</li><li>Mass-market apps</li></ul></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM + PARTNERS + FAQ + NEWS -->
+      <section id="community" class="section community-section" aria-labelledby="comm-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="comm-title">COMMUNITY &amp; TRUST</h2>
+            <p>Together we build the future</p>
+          </div>
+          <div class="trust-grid">
+            <div class="trust-block glass">
+              <h3>CORE TEAM</h3>
+              <div class="team-list">
+                <div class="team-member"><div class="avatar">MA</div><div><strong>Michael Anderson</strong><span>Founder & CEO</span></div></div>
+                <div class="team-member"><div class="avatar">DK</div><div><strong>David Kim</strong><span>CTO</span></div></div>
+                <div class="team-member"><div class="avatar">AR</div><div><strong>Alexa Rodriguez</strong><span>Head of Architecture</span></div></div>
+              </div>
+            </div>
+            <div class="trust-block glass">
+              <h3>TRUSTED PARTNERS</h3>
+              <div class="partners">
+                <span>Solana</span><span>Chainlink</span><span>AWS</span><span>Google Cloud</span>
+                <span>CoinGecko</span><span>CertiK</span><span>GitHub</span><span>Jupiter</span>
+              </div>
+            </div>
+            <div class="trust-block glass">
+              <h3>FAQ</h3>
+              <div class="faq-list" id="faqList">
+                <details><summary>What is ANGELA and its mission?</summary><p>ANGELA is an intelligent value infrastructure uniting AI, blockchain and digital economies.</p></details>
+                <details><summary>How does the AI infrastructure work?</summary><p>Adaptive core systems optimize routing, risk and yield in real time across the ecosystem.</p></details>
+                <details><summary>What makes ANGELA different?</summary><p>Civilization-level design combining luxury experience with institutional-grade trust.</p></details>
+                <details><summary>How is security ensured?</summary><p>Multi-layer defense, formal verification, continuous audits and progressive decentralization.</p></details>
+              </div>
+            </div>
+            <div class="trust-block glass">
+              <h3>LATEST NEWS</h3>
+              <div class="news-list">
+                <a href="#" class="news-item"><span class="news-title">ANGELA Mainnet Launch — The Future is Live</span><span class="news-date">May 20, 2024</span></a>
+                <a href="#" class="news-item"><span class="news-title">Partnership with AWS Expands AI Capabilities</span><span class="news-date">May 15, 2024</span></a>
+                <a href="#" class="news-item"><span class="news-title">ANGELA Staking Now Live</span><span class="news-date">May 10, 2024</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCS -->
+      <section id="docs" class="section docs-section" aria-labelledby="docs-title">
+        <div class="container">
+          <div class="section-header">
+            <h2 id="docs-title">DOCUMENTATION</h2>
+            <p>Technical references and whitepaper</p>
+          </div>
+          <div class="docs-grid">
+            <a href="#" class="doc-card glass"><h3>Whitepaper</h3><p>Full technical and economic design of the ANGELA protocol.</p></a>
+            <a href="#" class="doc-card glass"><h3>Developer Docs</h3><p>SDK, API references and integration guides.</p></a>
+            <a href="#" class="doc-card glass"><h3>Security Audits</h3><p>Public audit reports and continuous monitoring status.</p></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <svg class="footer-logo" viewBox="0 0 40 48" fill="none" aria-hidden="true">
+            <defs><linearGradient id="fG" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFE9A0"/><stop offset="50%" stop-color="#F5C542"/><stop offset="100%" stop-color="#C9A227"/></linearGradient></defs>
+            <path d="M20 4 L10 16 L13 18 L20 10 L27 18 L30 16 Z" fill="url(#fG)"/>
+            <path d="M20 10 L6 24 L10 27 L20 16 L30 27 L34 24 Z" fill="url(#fG)" opacity=".9"/>
+            <path d="M20 16 L4 32 L9 36 L20 24 L31 36 L36 32 Z" fill="url(#fG)" opacity=".7"/>
+            <path d="M20 20 L15 30 L20 40 L25 30 Z" fill="url(#fG)"/>
+          </svg>
+          <div>
+            <div class="f-name">ANGELA</div>
+            <div class="f-sub">THE NEXT INTELLIGENT VALUE INFRASTRUCTURE</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="f-col"><h4>Protocol</h4><a href="#docs">Documentation</a><a href="#docs">Whitepaper</a><a href="#roadmap">Roadmap</a></div>
+          <div class="f-col"><h4>Community</h4><a href="#">Discord</a><a href="#">Twitter / X</a><a href="#">Telegram</a><a href="#">GitHub</a></div>
+          <div class="f-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Careers</a></div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== ROADMAP ===== -->
-  <section id="roadmap">
-    <div class="container">
-      <h2 class="section-title">Roadmap</h2>
-      <p class="section-sub">Our Journey to a Greater Future</p>
-      <div class="roadmap-timeline" id="roadmapTimeline">
-        <div class="roadmap-item"><div class="dot"></div><div class="roadmap-card"><h4>Q2 2024</h4><h5>Foundation</h5><ul><li>Project Launch</li><li>Website Live</li><li>Community Building</li><li>Smart Contract Audit</li></ul></div></div>
-        <div class="roadmap-item"><div class="dot"></div><div class="roadmap-card"><h4>Q3 2024</h4><h5>Development</h5><ul><li>dApp Development</li><li>Staking Platform</li><li>Listing on DEX</li><li>Partnerships</li></ul></div></div>
-        <div class="roadmap-item"><div class="dot"></div><div class="roadmap-card"><h4>Q4 2024</h4><h5>Expansion</h5><ul><li>CEX Listings</li><li>Mobile App</li><li>Global Marketing</li><li>More Partnerships</li></ul></div></div>
-        <div class="roadmap-item"><div class="dot"></div><div class="roadmap-card"><h4>Q1 2025</h4><h5>Mass Adoption</h5><ul><li>Ecosystem Growth</li><li>Real World Utility</li><li>DAO Governance</li><li>Continuous Expansion</li></ul></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SECURITY ===== -->
-  <section id="security">
-    <div class="container">
-      <div class="security-box">
-        <h3>🔒 Security Is Our Priority</h3>
-        <p><strong>Audited. Verified. Trusted.</strong><br />Angel Coin is protected by leading blockchain security companies to ensure the highest level of safety.</p>
-        <div class="security-badges">
-          <span><i class="fas fa-check-circle"></i> CertiK</span>
-          <span><i class="fas fa-check-circle"></i> SolidProof</span>
-          <span><i class="fas fa-check-circle"></i> Hacken</span>
+      <div class="footer-bottom">
+        <span>© 2025 Angela Network. All rights reserved. Built for the future. Powered by community.</span>
+        <div class="socials">
+          <a href="#" aria-label="X">𝕏</a><a href="#" aria-label="Telegram">✈</a>
+          <a href="#" aria-label="Discord">◈</a><a href="#" aria-label="YouTube">▶</a>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
+  </div>
 
-  <!-- ===== ECOSYSTEM ===== -->
-  <section style="border-bottom: 1px solid rgba(255,255,255,0.03);">
-    <div class="container">
-      <h2 class="section-title" style="font-size:32px;">Angel Coin <span class="gold">Ecosystem</span></h2>
-      <div class="eco-slider" id="ecosystemSlider">
-        <span><i class="fas fa-link"></i> Chainlink</span>
-        <span><i class="fas fa-cube"></i> Polygon</span>
-        <span><i class="fas fa-coins"></i> PancakeSwap</span>
-        <span><i class="fas fa-shield"></i> CERTIK</span>
-        <span><i class="fas fa-check"></i> SOLIDProof</span>
-        <span><i class="fas fa-exchange-alt"></i> CoinSwitch</span>
-        <span><i class="fas fa-wallet"></i> Trust Wallet</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== COMMUNITY & NEWS ===== -->
-  <section id="community">
-    <div class="container">
-      <h2 class="section-title">Join Our <span class="gold">Community</span></h2>
-      <p class="section-sub">Be part of our global community and stay updated with the latest news.</p>
-      <div class="community-grid">
-        <div class="community-card"><i class="fab fa-discord"></i><h4>Discord</h4><p>Chat with the team and fellow angels.</p><a href="#" class="btn btn-outline" style="margin-top:16px;">Join</a></div>
-        <div class="community-card"><i class="fab fa-telegram-plane"></i><h4>Telegram</h4><p>Get instant updates and announcements.</p><a href="#" class="btn btn-outline" style="margin-top:16px;">Join</a></div>
-        <div class="community-card"><i class="fab fa-twitter"></i><h4>Twitter</h4><p>Follow us for the latest news.</p><a href="#" class="btn btn-outline" style="margin-top:16px;">Follow</a></div>
-      </div>
-
-      <div class="news-list">
-        <h3 style="font-size:26px; text-align:center; margin-bottom:24px;">Latest News</h3>
-        <div class="news-item"><span class="date">May 20, 2024</span><span class="title">Angel Coin Successfully Listed on Major DEX</span></div>
-        <div class="news-item"><span class="date">May 10, 2024</span><span class="title">Partnership with Leading Blockchain Security Firms</span></div>
-      </div>
-
-      <div class="binance-badge">
-        <span><i class="fab fa-binance"></i> BINANCE LABS</span>
-        <small>Proud partner in innovation</small>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== APP DOWNLOAD ===== -->
-  <section class="app-section">
-    <div class="container">
-      <h2 class="section-title">Get the <span class="gold">Angel Coin App</span></h2>
-      <p style="color:var(--text-muted); max-width:500px; margin:0 auto 20px;">Experience Angel Coin on the go. Available on iOS & Android.</p>
-      <div class="app-buttons">
-        <a href="#" class="btn btn-white"><i class="fab fa-apple"></i> App Store</a>
-        <a href="#" class="btn btn-white"><i class="fab fa-google-play"></i> Google Play</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FINAL CTA ===== -->
-  <section class="final-cta">
-    <div class="container">
-      <h2>A New Era of Financial Freedom</h2>
-      <p>Join the Angel Coin revolution and be part of a better, brighter future.</p>
-      <a href="#" class="btn btn-primary" style="padding:18px 56px; font-size:20px;">Get Started</a>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Angel Coin. All Rights Reserved.</p>
-    </div>
-  </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
