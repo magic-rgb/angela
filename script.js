@@ -1,76 +1,292 @@
-const loader = document.getElementById("loader");
-const nav = document.getElementById("nav");
-const menu = document.getElementById("menu");
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050608" />
+  <meta name="description" content="ANGELA — Intelligent asset infrastructure for the next era of value. Intelligence, security and real-world utility in one coherent system." />
+  <meta property="og:title" content="ANGELA — The Next Era of Value" />
+  <meta property="og:description" content="Intelligent infrastructure where intelligence, security and real-world value converge." />
+  <meta property="og:type" content="website" />
+  <title>ANGELA — The Next Era of Value</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="assets/logo.png" as="image" />
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <img src="assets/logo.png" alt="" class="loader-logo" width="64" height="64" />
+    <span>INITIALIZING ANGELA</span>
+  </div>
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    if (loader) loader.classList.add("hide");
-  }, 650);
-});
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="ANGELA home">
+      <img src="assets/logo.png" alt="" class="brand-logo" width="36" height="36" />
+      <span>
+        <b>ANGELA</b>
+        <small>ENGINEERED FOR THE NEXT ERA</small>
+      </span>
+    </a>
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  { threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
-);
+    <nav id="primary-nav" aria-label="Primary">
+      <a href="#vision">Vision</a>
+      <a href="#core">Core</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#economy">Economy</a>
+      <a href="#security">Trust</a>
+      <a href="#journey">Journey</a>
+    </nav>
 
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    <a class="nav-cta" href="#gate">Enter ANGELA <span aria-hidden="true">↗</span></a>
 
-window.addEventListener(
-  "scroll",
-  () => {
-    if (!nav) return;
-    const y = window.scrollY;
-    if (y > 40) {
-      nav.style.borderBottom = "1px solid rgba(217,182,106,.1)";
-      nav.style.background = "rgba(5,6,8,.88)";
-    } else {
-      nav.style.borderBottom = "1px solid transparent";
-      nav.style.background = "linear-gradient(180deg,rgba(5,6,8,.92),transparent)";
-    }
-  },
-  { passive: true }
-);
+    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <i></i><i></i>
+    </button>
+  </header>
 
-if (menu && nav) {
-  menu.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("open");
-    menu.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    menu.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-  });
-}
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
 
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (e) => {
-    const href = link.getAttribute("href");
-    if (!href || href === "#") return;
-    const target = document.querySelector(href);
-    if (!target) return;
-    e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: "smooth" });
-    if (nav) {
-      nav.classList.remove("open");
-      if (menu) {
-        menu.setAttribute("aria-expanded", "false");
-        menu.setAttribute("aria-label", "Open menu");
-      }
-    }
-  });
-});
+      <div class="hero-copy reveal">
+        <p class="eyebrow">THE INTELLIGENT ASSET INFRASTRUCTURE</p>
+        <h1>Beyond<br><em>imagination.</em></h1>
+        <p class="lead">A new architecture where intelligence, security and real-world value converge.</p>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#vision">Explore ANGELA <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="#core">Discover the Core</a>
+        </div>
+      </div>
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && nav && nav.classList.contains("open")) {
-    nav.classList.remove("open");
-    if (menu) {
-      menu.setAttribute("aria-expanded", "false");
-      menu.setAttribute("aria-label", "Open menu");
-      menu.focus();
-    }
-  }
-});
+      <div class="hero-visual reveal" aria-hidden="true">
+        <img src="assets/logo-rings.png" alt="" class="hero-emblem" width="480" height="480" decoding="async" />
+      </div>
+
+      <div class="hero-meta" aria-hidden="true">
+        <span>01</span>
+        <span>SCROLL TO EXPLORE</span>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="manifesto section" id="vision">
+      <div class="section-label">01 — THE VISION</div>
+      <div class="manifesto-grid">
+        <div class="reveal">
+          <p class="eyebrow">A DIFFERENT KIND OF INFRASTRUCTURE</p>
+          <h2>Build for what<br><em>comes next.</em></h2>
+          <p class="manifesto-lead">ANGELA is designed as an intelligent digital infrastructure — not another layer of noise. It connects people, assets, intelligence and opportunity through one coherent experience.</p>
+          <p class="small">The ambition is simple: make the future feel inevitable.</p>
+        </div>
+        <div class="manifesto-visual reveal">
+          <img src="assets/vision.png" alt="A figure approaching ANGELA's radiant crystal infrastructure" loading="lazy" decoding="async" width="640" height="800" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE -->
+    <section class="core-section section" id="core">
+      <div class="section-label">02 — THE CORE</div>
+      <div class="core-layout">
+        <div class="core-copy reveal">
+          <p class="eyebrow">THE HEART OF ANGELA</p>
+          <h2>Intelligence<br>with <em>purpose.</em></h2>
+          <p>At the center is a living architecture that turns signals into insight, insight into action, and action into measurable value.</p>
+          <ul class="core-points">
+            <li><strong>Learn</strong> — AI models continuously adapt and improve</li>
+            <li><strong>Analyze</strong> — Real-time data becomes actionable intelligence</li>
+            <li><strong>Execute</strong> — Smart systems turn intelligence into value</li>
+          </ul>
+        </div>
+        <div class="core-visual reveal">
+          <img src="assets/core-rings.png" alt="ANGELA intelligence core — orbital rings around the central mark" loading="lazy" decoding="async" width="720" height="720" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOSYSTEM -->
+    <section class="ecosystem section" id="ecosystem">
+      <div class="section-label">03 — THE ECOSYSTEM</div>
+      <div class="ecosystem-head reveal">
+        <p class="eyebrow">ONE SYSTEM. MANY WORLDS.</p>
+        <h2>Designed to <em>connect.</em></h2>
+      </div>
+      <div class="ecosystem-grid">
+        <article class="eco-card reveal">
+          <div class="eco-icon">
+            <img src="assets/ai-cube.png" alt="" loading="lazy" decoding="async" width="120" height="120" />
+          </div>
+          <span>01</span>
+          <h3>Intelligence</h3>
+          <p>AI-led experiences built around useful signals and continuous learning.</p>
+        </article>
+        <article class="eco-card reveal">
+          <div class="eco-icon">
+            <img src="assets/orb.png" alt="" loading="lazy" decoding="async" width="120" height="120" />
+          </div>
+          <span>02</span>
+          <h3>Community</h3>
+          <p>Participation becomes a meaningful layer of shared value and governance.</p>
+        </article>
+        <article class="eco-card reveal">
+          <div class="eco-icon">
+            <img src="assets/crystal.png" alt="" loading="lazy" decoding="async" width="120" height="120" />
+          </div>
+          <span>03</span>
+          <h3>Assets</h3>
+          <p>A foundation for digital and real-world utility, secured by design.</p>
+        </article>
+        <article class="eco-card reveal">
+          <div class="eco-icon">
+            <img src="assets/crystal-portal.png" alt="" loading="lazy" decoding="async" width="120" height="120" />
+          </div>
+          <span>04</span>
+          <h3>Growth</h3>
+          <p>An ecosystem designed to evolve without losing its center.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ECONOMY -->
+    <section class="economy section" id="economy">
+      <div class="section-label">04 — THE ECONOMY</div>
+      <div class="economy-layout">
+        <div class="economy-copy reveal">
+          <p class="eyebrow">VALUE SHOULD MOVE WITH PURPOSE</p>
+          <h2>A living<br><em>economy.</em></h2>
+          <p>ANGELA is designed around sustainable participation, utility and long-term ecosystem growth.</p>
+        </div>
+        <div class="value-flow reveal" aria-hidden="true">
+          <div class="flow-node">COMMUNITY</div>
+          <div class="flow-line"></div>
+          <div class="flow-node active">ANGELA</div>
+          <div class="flow-line"></div>
+          <div class="flow-node">ECOSYSTEM</div>
+          <div class="flow-line"></div>
+          <div class="flow-node">VALUE</div>
+        </div>
+      </div>
+      <div class="supply reveal">
+        <span>TOTAL SUPPLY</span>
+        <strong>1,000,000,000</strong>
+        <small>ANGELA</small>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust section" id="security">
+      <div class="section-label">05 — TRUST</div>
+      <div class="trust-grid">
+        <div class="trust-intro reveal">
+          <p class="eyebrow">QUIET CONFIDENCE</p>
+          <h2>Security is<br><em>architecture.</em></h2>
+          <div class="trust-visual">
+            <img src="assets/shield.png" alt="ANGELA security shield — transparent protection by design" loading="lazy" decoding="async" width="420" height="520" />
+          </div>
+        </div>
+        <div class="trust-items">
+          <div class="trust-item reveal">
+            <span>01</span>
+            <div>
+              <h3>Transparent by design</h3>
+              <p>Clear states, clear information, no invented promises.</p>
+            </div>
+          </div>
+          <div class="trust-item reveal">
+            <span>02</span>
+            <div>
+              <h3>Built to evolve</h3>
+              <p>Infrastructure designed for progressive expansion and audits.</p>
+            </div>
+          </div>
+          <div class="trust-item reveal">
+            <span>03</span>
+            <div>
+              <h3>Trust before hype</h3>
+              <p>Security and clarity come before launch-day spectacle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="journey section" id="journey">
+      <div class="section-label">06 — THE JOURNEY</div>
+      <div class="journey-head reveal">
+        <p class="eyebrow">A SYSTEM IN MOTION</p>
+        <h2>From first signal<br>to <em>global scale.</em></h2>
+      </div>
+      <div class="journey-visual reveal">
+        <img src="assets/journey.png" alt="The path of ANGELA — stages of growth toward the core" loading="lazy" decoding="async" width="960" height="1200" />
+      </div>
+      <div class="journey-line">
+        <article class="stage reveal">
+          <span>01</span>
+          <h3>Genesis</h3>
+          <p>Foundation, identity and core infrastructure.</p>
+        </article>
+        <article class="stage reveal">
+          <span>02</span>
+          <h3>Awakening</h3>
+          <p>Community, experiences and participation.</p>
+        </article>
+        <article class="stage reveal">
+          <span>03</span>
+          <h3>Intelligence</h3>
+          <p>Deeper utility and intelligent systems.</p>
+        </article>
+        <article class="stage reveal">
+          <span>04</span>
+          <h3>Expansion</h3>
+          <p>Products, partnerships and global reach.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="community section" id="community">
+      <div class="community-box reveal">
+        <p class="eyebrow">THE HUMAN LAYER</p>
+        <h2>The future is<br><em>built together.</em></h2>
+        <p>Join the people shaping the next chapter of ANGELA.</p>
+        <div class="socials">
+          <a href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+          <a href="https://x.com/Angelaxai" target="_blank" rel="noopener noreferrer">X ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GATE -->
+    <section class="gate section" id="gate">
+      <div class="gate-visual" aria-hidden="true">
+        <img src="assets/gate.png" alt="" loading="lazy" decoding="async" width="960" height="1200" />
+        <div class="gate-fade"></div>
+      </div>
+      <div class="gate-content">
+        <p class="eyebrow reveal">THE NEXT ERA IS ALREADY FORMING</p>
+        <h2 class="reveal">Enter<br><em>ANGELA.</em></h2>
+        <a class="button button-gold reveal" href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer">
+          Enter the ecosystem <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <img src="assets/logo.png" alt="" width="28" height="28" />
+      <div class="footer-brand">ANGELA</div>
+    </div>
+    <span>ENGINEERED FOR THE NEXT ERA</span>
+    <span>© 2026 ANGELA</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
