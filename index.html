@@ -8,6 +8,7 @@
   <title>ANGELA — The Next Era of Value</title>
   <link rel="icon" type="image/webp" href="assets/logo.webp/logo.webp" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="assets/hero-scene.webp/hero-scene.webp" as="image" />
   <link rel="preload" href="assets/logo.webp/logo.webp" as="image" />
 </head>
 <body>
@@ -18,12 +19,13 @@
 
   <header class="nav" id="nav">
     <a class="brand" href="#top" aria-label="ANGELA home">
-      <img src="assets/logo.webp/logo.webp" alt="" class="brand-logo" width="32" height="32" />
-      <span>
+      <img src="assets/logo.webp/logo.webp" alt="" class="brand-logo" width="34" height="34" />
+      <span class="brand-text">
         <b>ANGELA</b>
         <small>ENGINEERED FOR THE NEXT ERA</small>
       </span>
     </a>
+
     <nav id="primary-nav" aria-label="Primary">
       <a href="#vision">Vision</a>
       <a href="#core">Core</a>
@@ -32,30 +34,31 @@
       <a href="#security">Trust</a>
       <a href="#journey">Journey</a>
     </nav>
-    <a class="nav-cta" href="#gate">Enter ANGELA <span aria-hidden="true">↗</span></a>
-    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-      <i></i><i></i>
-    </button>
+
+    <div class="nav-right">
+      <a class="nav-cta" href="#gate">Enter ANGELA <span aria-hidden="true">↗</span></a>
+      <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <i></i><i></i>
+      </button>
+    </div>
   </header>
 
   <main id="top">
-    <!-- HERO -->
+    <!-- HERO: full hero-scene, crisp, text on top -->
     <section class="hero">
-      <div class="hero-stars" aria-hidden="true"></div>
-      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/hero-scene.webp/hero-scene.webp" alt="" width="1400" height="800" decoding="async" fetchpriority="high" />
+      </div>
 
-      <div class="hero-inner">
-        <div class="hero-copy reveal">
+      <div class="hero-content">
+        <div class="hero-glass reveal">
           <p class="eyebrow">THE INTELLIGENT ASSET INFRASTRUCTURE</p>
           <h1>Beyond<br><em>imagination.</em></h1>
           <p class="lead">A new architecture where intelligence, security and real-world value converge.</p>
           <div class="hero-actions">
             <a class="button button-gold" href="#vision">Explore ANGELA <span aria-hidden="true">→</span></a>
-            <a class="button button-quiet" href="#core">Discover the Core</a>
+            <a class="button button-glass" href="#core">Discover the Core</a>
           </div>
-        </div>
-        <div class="hero-mark reveal" aria-hidden="true">
-          <img src="assets/logo-rings.webp/logo-rings.webp" alt="" width="420" height="420" decoding="async" />
         </div>
       </div>
 
@@ -65,7 +68,7 @@
     </section>
 
     <!-- VISION -->
-    <section class="section vision" id="vision">
+    <section class="section" id="vision">
       <div class="section-label">01 — THE VISION</div>
       <div class="split">
         <div class="split-text reveal">
@@ -74,14 +77,14 @@
           <p>ANGELA is designed as an intelligent digital infrastructure — not another layer of noise. It connects people, assets, intelligence and opportunity through one coherent experience.</p>
           <p class="muted">The ambition is simple: make the future feel inevitable.</p>
         </div>
-        <div class="split-media reveal">
+        <div class="split-media glass-frame reveal">
           <img src="assets/vision.webp/vision.webp" alt="" loading="lazy" decoding="async" width="640" height="480" />
         </div>
       </div>
     </section>
 
     <!-- CORE -->
-    <section class="section core" id="core">
+    <section class="section core-sec" id="core">
       <div class="section-label">02 — THE CORE</div>
       <div class="split reverse">
         <div class="split-text reveal">
@@ -94,40 +97,40 @@
             <li><strong>Execute</strong> — intelligence becomes value</li>
           </ul>
         </div>
-        <div class="split-media reveal">
+        <div class="split-media glass-frame reveal">
           <img src="assets/core-rings.webp/core-rings.webp" alt="" loading="lazy" decoding="async" width="640" height="480" />
         </div>
       </div>
     </section>
 
     <!-- ECOSYSTEM -->
-    <section class="section ecosystem" id="ecosystem">
+    <section class="section" id="ecosystem">
       <div class="section-label">03 — THE ECOSYSTEM</div>
       <div class="section-head reveal">
         <p class="eyebrow">ONE SYSTEM. MANY WORLDS.</p>
         <h2>Designed to <em>connect.</em></h2>
       </div>
       <div class="cards">
-        <article class="card reveal">
-          <img src="assets/ai-cube.webp/ai-cube.webp" alt="" loading="lazy" width="64" height="64" />
+        <article class="card glass-card reveal">
+          <div class="card-icon"><img src="assets/ai-cube.webp/ai-cube.webp" alt="" loading="lazy" width="56" height="56" /></div>
           <span>01</span>
           <h3>Intelligence</h3>
           <p>AI-led experiences built around useful signals.</p>
         </article>
-        <article class="card reveal">
-          <img src="assets/orb.webp/orb.webp" alt="" loading="lazy" width="64" height="64" />
+        <article class="card glass-card reveal">
+          <div class="card-icon"><img src="assets/orb.webp/orb.webp" alt="" loading="lazy" width="56" height="56" /></div>
           <span>02</span>
           <h3>Community</h3>
           <p>Participation as a meaningful layer of value.</p>
         </article>
-        <article class="card reveal">
-          <img src="assets/crystal.webp/crystal.webp" alt="" loading="lazy" width="64" height="64" />
+        <article class="card glass-card reveal">
+          <div class="card-icon"><img src="assets/crystal.webp/crystal.webp" alt="" loading="lazy" width="56" height="56" /></div>
           <span>03</span>
           <h3>Assets</h3>
           <p>Foundation for digital and real-world utility.</p>
         </article>
-        <article class="card reveal">
-          <img src="assets/crystal-portal.webp/crystal-portal.webp" alt="" loading="lazy" width="64" height="64" />
+        <article class="card glass-card reveal">
+          <div class="card-icon"><img src="assets/crystal-portal.webp/crystal-portal.webp" alt="" loading="lazy" width="56" height="56" /></div>
           <span>04</span>
           <h3>Growth</h3>
           <p>Designed to evolve without losing its center.</p>
@@ -135,60 +138,81 @@
       </div>
     </section>
 
-    <!-- ECONOMY -->
+    <!-- ECONOMY — redesigned -->
     <section class="section economy" id="economy">
       <div class="section-label">04 — THE ECONOMY</div>
-      <div class="economy-row reveal">
-        <div>
+      <div class="economy-grid">
+        <div class="economy-intro reveal">
           <p class="eyebrow">VALUE SHOULD MOVE WITH PURPOSE</p>
           <h2>A living<br><em>economy.</em></h2>
-          <p>Sustainable participation, utility and long-term ecosystem growth.</p>
+          <p>ANGELA is designed around sustainable participation, utility and long-term ecosystem growth.</p>
         </div>
-        <div class="supply">
-          <span>TOTAL SUPPLY</span>
-          <strong>1,000,000,000</strong>
-          <small>ANGELA</small>
+        <div class="economy-panel glass-card reveal">
+          <div class="econ-row">
+            <span class="econ-label">TOTAL SUPPLY</span>
+            <strong class="econ-value">1,000,000,000</strong>
+            <span class="econ-unit">ANGELA</span>
+          </div>
+          <div class="econ-divider"></div>
+          <div class="econ-flow">
+            <div class="econ-node">Community</div>
+            <div class="econ-arrow">→</div>
+            <div class="econ-node active">ANGELA</div>
+            <div class="econ-arrow">→</div>
+            <div class="econ-node">Ecosystem</div>
+            <div class="econ-arrow">→</div>
+            <div class="econ-node">Value</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- TRUST -->
-    <section class="section trust" id="security">
+    <section class="section" id="security">
       <div class="section-label">05 — TRUST</div>
       <div class="split">
         <div class="split-text reveal">
           <p class="eyebrow">QUIET CONFIDENCE</p>
           <h2>Security is<br><em>architecture.</em></h2>
           <div class="trust-list">
-            <div><span>01</span><div><h3>Transparent by design</h3><p>Clear states, clear information.</p></div></div>
-            <div><span>02</span><div><h3>Built to evolve</h3><p>Progressive expansion and audits.</p></div></div>
-            <div><span>03</span><div><h3>Trust before hype</h3><p>Clarity before launch-day spectacle.</p></div></div>
+            <div class="trust-item glass-row">
+              <span>01</span>
+              <div><h3>Transparent by design</h3><p>Clear states, clear information.</p></div>
+            </div>
+            <div class="trust-item glass-row">
+              <span>02</span>
+              <div><h3>Built to evolve</h3><p>Progressive expansion and audits.</p></div>
+            </div>
+            <div class="trust-item glass-row">
+              <span>03</span>
+              <div><h3>Trust before hype</h3><p>Clarity before launch-day spectacle.</p></div>
+            </div>
           </div>
         </div>
-        <div class="split-media reveal shield-wrap">
+        <div class="split-media glass-frame reveal">
           <img src="assets/shield.webp/shield.webp" alt="" loading="lazy" decoding="async" width="400" height="480" />
         </div>
       </div>
     </section>
 
     <!-- JOURNEY -->
-    <section class="section journey" id="journey">
+    <section class="section" id="journey">
       <div class="section-label">06 — THE JOURNEY</div>
       <div class="section-head reveal">
         <p class="eyebrow">A SYSTEM IN MOTION</p>
         <h2>From first signal<br>to <em>global scale.</em></h2>
       </div>
       <div class="stages">
-        <article class="stage reveal"><span>01</span><h3>Genesis</h3><p>Foundation and infrastructure.</p></article>
-        <article class="stage reveal"><span>02</span><h3>Awakening</h3><p>Community and participation.</p></article>
-        <article class="stage reveal"><span>03</span><h3>Intelligence</h3><p>Deeper utility systems.</p></article>
-        <article class="stage reveal"><span>04</span><h3>Expansion</h3><p>Partnerships and global reach.</p></article>
+        <article class="stage glass-card reveal"><span>01</span><h3>Genesis</h3><p>Foundation and infrastructure.</p></article>
+        <article class="stage glass-card reveal"><span>02</span><h3>Awakening</h3><p>Community and participation.</p></article>
+        <article class="stage glass-card reveal"><span>03</span><h3>Intelligence</h3><p>Deeper utility systems.</p></article>
+        <article class="stage glass-card reveal"><span>04</span><h3>Expansion</h3><p>Partnerships and global reach.</p></article>
       </div>
     </section>
 
     <!-- COMMUNITY -->
     <section class="section community" id="community">
-      <div class="community-panel reveal">
+      <div class="community-panel glass-card reveal">
         <p class="eyebrow">THE HUMAN LAYER</p>
         <h2>The future is<br><em>built together.</em></h2>
         <p>Join the people shaping the next chapter of ANGELA.</p>
@@ -203,9 +227,8 @@
     <section class="gate" id="gate">
       <div class="gate-bg" aria-hidden="true">
         <img src="assets/gate.webp/gate.webp" alt="" loading="lazy" decoding="async" />
-        <div class="gate-veil"></div>
       </div>
-      <div class="gate-content reveal">
+      <div class="gate-content glass-card reveal">
         <p class="eyebrow">THE NEXT ERA IS ALREADY FORMING</p>
         <h2>Enter<br><em>ANGELA.</em></h2>
         <a class="button button-gold" href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer">
