@@ -5,34 +5,25 @@ const menu = document.getElementById("menu");
 window.addEventListener("load", () => {
   setTimeout(() => {
     if (loader) loader.classList.add("hide");
-  }, 650);
+  }, 600);
 });
 
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+      if (entry.isIntersecting) entry.target.classList.add("visible");
     });
   },
-  { threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
+  { threshold: 0.1, rootMargin: "0px 0px -24px 0px" }
 );
-
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
 window.addEventListener(
   "scroll",
   () => {
     if (!nav) return;
-    const y = window.scrollY;
-    if (y > 40) {
-      nav.style.borderBottom = "1px solid rgba(217,182,106,.1)";
-      nav.style.background = "rgba(5,6,8,.88)";
-    } else {
-      nav.style.borderBottom = "1px solid transparent";
-      nav.style.background = "linear-gradient(180deg,rgba(5,6,8,.92),transparent)";
-    }
+    if (window.scrollY > 30) nav.classList.add("scrolled");
+    else nav.classList.remove("scrolled");
   },
   { passive: true }
 );
@@ -52,7 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const target = document.querySelector(href);
     if (!target) return;
     e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - 80;
+    const top = target.getBoundingClientRect().top + window.scrollY - 72;
     window.scrollTo({ top, behavior: "smooth" });
     if (nav) {
       nav.classList.remove("open");
