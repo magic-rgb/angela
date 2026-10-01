@@ -193,7 +193,7 @@ body.has-cursor, body.has-cursor a, body.has-cursor button { cursor: none; }
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
     linear-gradient(180deg, rgba(2,5,10,.72) 0%, rgba(2,5,10,.48) 40%, rgba(2,5,10,.8) 100%),
-    url('../assets/hero/Background10cards.webp') center / cover no-repeat;
+    url('assets/hero/Background10cards.webp') center / cover no-repeat;
 }
 .carousel-wrapper { display: flex; align-items: center; gap: .85rem; }
 .carousel { flex: 1; overflow: hidden; perspective: 1400px; height: 340px; }
