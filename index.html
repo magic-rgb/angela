@@ -31,177 +31,185 @@
 
   <header class="header" id="header">
     <a href="#hero" class="logo" aria-label="ANGELA Home">
-      <img src="assets/logo.webp/Logo1.png" alt="ANGELA" class="logo-mark" width="32" height="32" />
+      <img src="assets/logo.webp/Logo1.png" alt="" class="logo-mark" width="28" height="28" />
       <span class="logo-text">ANGELA</span>
     </a>
-    <a href="#ecosystem" class="enter-btn liquid-btn"><span>ENTER ANGELA</span><span class="arrow">→</span></a>
+    <a href="#ecosystem" class="enter-btn">ENTER ANGELA <span aria-hidden="true">→</span></a>
   </header>
 
   <main>
+    <!-- HERO — full-bleed image, text + CTAs overlaid -->
     <section class="hero" id="hero">
-      <div class="hero-bg" aria-hidden="true"><div class="stars"></div><div class="horizon"></div></div>
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title">ANGELA</h1>
-          <p class="hero-tagline">BEYOND IMAGINATION.<br />BEYOND LIMITS.<br />BUILT FOR THE NEXT ERA.</p>
-          <p class="hero-desc">ANGELA is the intelligence layer powering a new world of ownership, connection, and endless possibilities.</p>
-          <div class="hero-ctas">
-            <a href="#ecosystem" class="liquid-btn primary"><span>EXPLORE ANGELA</span><span class="arrow">→</span></a>
-            <a href="#roadmap" class="liquid-btn"><span>WHITEPAPER</span><span class="arrow">→</span></a>
-            <a href="#tokenomics" class="liquid-btn"><span>BUY ANGELA COIN</span><span class="arrow">→</span></a>
-            <a href="#community" class="liquid-btn"><span>JOIN COMMUNITY</span><span class="arrow">→</span></a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-image-wrap">
-            <img src="assets/hero/file_hero.png" alt="ANGELA crystalline intelligence core" class="hero-crystal-img" width="480" height="640" decoding="async" fetchpriority="high" />
-          </div>
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-art" src="assets/hero/file_hero.png" alt="" decoding="async" fetchpriority="high" />
+        <div class="hero-shade"></div>
+      </div>
+      <div class="hero-copy">
+        <h1 class="hero-title">ANGELA</h1>
+        <p class="hero-tagline">BEYOND IMAGINATION.<br />BEYOND LIMITS.<br />BUILT FOR THE NEXT ERA.</p>
+        <p class="hero-desc">ANGELA is the intelligence layer powering a new world of ownership, connection, and endless possibilities.</p>
+        <div class="hero-ctas">
+          <a href="#ecosystem" class="btn btn-gold">EXPLORE ANGELA</a>
+          <a href="#roadmap" class="btn btn-cyan">WHITEPAPER</a>
+          <a href="#tokenomics" class="btn btn-violet">BUY ANGELA COIN</a>
+          <a href="#community" class="btn btn-blue">JOIN COMMUNITY</a>
         </div>
       </div>
     </section>
 
+    <!-- 10-CARD ECOSYSTEM CAROUSEL -->
     <section class="ecosystem" id="ecosystem">
       <div class="ecosystem-bg" aria-hidden="true"></div>
-      <div class="section-inner">
-        <div class="carousel-wrapper">
-          <button class="carousel-nav prev" id="carouselPrev" type="button" aria-label="Previous card">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
-          <div class="carousel" id="carousel" tabindex="0" aria-label="ANGELA ecosystem">
-            <div class="carousel-track" id="carouselTrack"></div>
-          </div>
-          <button class="carousel-nav next" id="carouselNext" type="button" aria-label="Next card">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </button>
+      <div class="eco-inner">
+        <button class="eco-nav prev" id="carouselPrev" type="button" aria-label="Previous">‹</button>
+        <div class="carousel" id="carousel" tabindex="0">
+          <div class="carousel-track" id="carouselTrack"></div>
         </div>
-        <div class="carousel-dots" id="carouselDots" role="tablist"></div>
+        <button class="eco-nav next" id="carouselNext" type="button" aria-label="Next">›</button>
       </div>
+      <div class="carousel-dots" id="carouselDots"></div>
     </section>
 
+    <!-- ABOUT — full-bleed bg image, content overlaid -->
     <section class="about" id="about">
-      <div class="about-bg" aria-hidden="true"><img src="assets/about/About1.png" loading="lazy" decoding="async" alt="" /></div>
-      <div class="section-inner about-grid">
-        <div class="about-content">
-          <span class="section-label">ABOUT ANGELA</span>
-          <h2 class="section-title">THE INTELLIGENCE LAYER<br />FOR THE NEXT DIGITAL ERA.</h2>
-          <p class="about-body">ANGELA is building an intelligent foundation for a decentralized future — designed to connect infrastructure, ownership and human participation through technology that evolves with its ecosystem.</p>
+      <div class="about-media" aria-hidden="true">
+        <img src="assets/about/About1.png" alt="" loading="lazy" decoding="async" />
+        <div class="about-shade"></div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">✦ ABOUT ANGELA</span>
+        <h2 class="about-title">THE INTELLIGENCE LAYER<br />FOR THE NEXT DIGITAL ERA.</h2>
+        <p class="about-body">ANGELA is building the foundation for a decentralized future where intelligence, infrastructure, and community converge to create real-world impact.</p>
+        <div class="about-principles">
+          <article><h4>SECURE &amp; TRANSPARENT</h4><p>Trust built on transparency.</p></article>
+          <article><h4>COMMUNITY DRIVEN</h4><p>Power in unity. Growth together.</p></article>
+          <article><h4>INTELLIGENT &amp; SCALABLE</h4><p>Infrastructure that adapts and evolves.</p></article>
+          <article><h4>REAL-WORLD UTILITY</h4><p>Solutions that matter.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="metrics" id="metrics" aria-label="Ecosystem status">
-      <div class="section-inner">
-        <div class="metrics-track">
-          <div class="metric-item"><span class="metric-status">1,000,000,000</span><span class="metric-label">TOTAL SUPPLY</span></div>
-          <div class="metric-item"><span class="metric-status">GROWING</span><span class="metric-label">HOLDERS</span></div>
-          <div class="metric-item"><span class="metric-status">BEING CREATED</span><span class="metric-label">TRANSACTIONS</span></div>
-          <div class="metric-item"><span class="metric-status">BEING BUILT</span><span class="metric-label">MARKET CAP</span></div>
-          <div class="metric-item"><span class="metric-status">16</span><span class="metric-label">PARTNERS</span></div>
-          <div class="metric-item"><span class="metric-status">10</span><span class="metric-label">COUNTRIES</span></div>
-        </div>
+    <!-- METRICS -->
+    <section class="metrics" id="metrics">
+      <div class="metrics-row">
+        <div class="metric"><strong>1,000,000,000</strong><span>TOTAL SUPPLY</span></div>
+        <div class="metric"><strong>GROWING</strong><span>HOLDERS</span></div>
+        <div class="metric"><strong>BEING CREATED</strong><span>TRANSACTIONS</span></div>
+        <div class="metric"><strong>BEING BUILT</strong><span>MARKET CAP</span></div>
+        <div class="metric"><strong>16</strong><span>PARTNERS</span></div>
+        <div class="metric"><strong>10</strong><span>COUNTRIES</span></div>
       </div>
     </section>
 
-    <section class="principles" id="principles">
-      <div class="section-inner">
-        <h2 class="section-title centered">ANGELA PRINCIPLES</h2>
-        <div class="principles-grid">
-          <article class="principle-card"><div class="principle-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 6L38 14V30L24 38L10 30V14L24 6Z" stroke="#D6AD4D" stroke-width="1.5"/><circle cx="24" cy="22" r="4" fill="#D6AD4D" opacity="0.7"/></svg></div><h3>INTELLIGENCE</h3><p>Technology designed to evolve.</p></article>
-          <article class="principle-card"><div class="principle-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="12" y="12" width="24" height="24" rx="2" stroke="#D6AD4D" stroke-width="1.5"/><path d="M18 24h12M24 18v12" stroke="#D6AD4D" stroke-width="1.5"/></svg></div><h3>OWNERSHIP</h3><p>A new architecture for digital participation.</p></article>
-          <article class="principle-card"><div class="principle-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M8 32L24 8L40 32H8Z" stroke="#D6AD4D" stroke-width="1.5"/><path d="M16 32V40H32V32" stroke="#D6AD4D" stroke-width="1.5"/></svg></div><h3>INFRASTRUCTURE</h3><p>Built for scale, resilience and long-term utility.</p></article>
-          <article class="principle-card"><div class="principle-icon"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="8" stroke="#D6AD4D" stroke-width="1.5"/><path d="M8 40C8 32 16 28 24 28C32 28 40 32 40 40" stroke="#D6AD4D" stroke-width="1.5"/></svg></div><h3>COMMUNITY</h3><p>Powered by people who build the future together.</p></article>
-        </div>
-      </div>
-    </section>
-
+    <!-- ROADMAP — full-bleed bg image, content overlaid -->
     <section class="roadmap" id="roadmap">
-      <div class="roadmap-bg" aria-hidden="true"><img src="assets/roadmap/Roadmap1.webp" loading="lazy" decoding="async" alt="" /></div>
-      <div class="section-inner">
-        <h2 class="section-title centered">ROADMAP TO THE FUTURE</h2>
-        <div class="roadmap-timeline">
-          <div class="roadmap-year">
-            <div class="year-header"><span class="year">2026</span><span class="year-label">THE FOUNDATION YEAR</span></div>
-            <div class="year-items">
-              <article class="roadmap-item"><h4>ANGELA LAUNCH</h4><p>Establish the ANGELA identity and ecosystem foundation.</p></article>
-              <article class="roadmap-item"><h4>CORE INFRASTRUCTURE</h4><p>Build the technological backbone powering the ecosystem.</p></article>
-              <article class="roadmap-item"><h4>COMMUNITY GENESIS</h4><p>Bring together the first generation of builders, creators and believers.</p></article>
-              <article class="roadmap-item"><h4>ECOSYSTEM FOUNDATION</h4><p>Establish the core architecture for future expansion.</p></article>
-            </div>
+      <div class="roadmap-media" aria-hidden="true">
+        <img src="assets/roadmap/Roadmap1.webp" alt="" loading="lazy" decoding="async" />
+        <div class="roadmap-shade"></div>
+      </div>
+      <div class="roadmap-content">
+        <h2 class="section-heading">ROADMAP TO THE FUTURE</h2>
+        <div class="roadmap-line">
+          <div class="rm-col">
+            <div class="rm-year">2026</div>
+            <div class="rm-sub">THE FOUNDATION YEAR</div>
+            <ul class="rm-list">
+              <li><strong>ANGELA LAUNCH</strong><span>Establish identity &amp; ecosystem foundation.</span></li>
+              <li><strong>CORE INFRASTRUCTURE</strong><span>Build the technological backbone.</span></li>
+              <li><strong>COMMUNITY GENESIS</strong><span>First generation of builders &amp; believers.</span></li>
+              <li><strong>ECOSYSTEM FOUNDATION</strong><span>Architecture for future expansion.</span></li>
+            </ul>
           </div>
-          <div class="roadmap-center" aria-hidden="true"><div class="roadmap-crystal"></div><div class="roadmap-thread"></div></div>
-          <div class="roadmap-year">
-            <div class="year-header"><span class="year">2027</span><span class="year-label">THE EXPANSION YEAR</span></div>
-            <div class="year-items">
-              <article class="roadmap-item"><h4>INTELLIGENCE LAYER</h4><p>Introduce intelligent infrastructure and advanced AI-powered capabilities.</p></article>
-              <article class="roadmap-item"><h4>ECOSYSTEM EXPANSION</h4><p>Expand ANGELA through new integrations, applications and partnerships.</p></article>
-              <article class="roadmap-item"><h4>GLOBAL REACH</h4><p>Move toward broader real-world adoption.</p></article>
-              <article class="roadmap-item"><h4>THE NEXT ERA</h4><p>Transform ANGELA into an evolving digital infrastructure.</p></article>
-            </div>
+          <div class="rm-core" aria-hidden="true"><div class="rm-crystal"></div></div>
+          <div class="rm-col">
+            <div class="rm-year">2027</div>
+            <div class="rm-sub">THE EXPANSION YEAR</div>
+            <ul class="rm-list">
+              <li><strong>INTELLIGENCE LAYER</strong><span>AI-powered infrastructure &amp; capabilities.</span></li>
+              <li><strong>ECOSYSTEM EXPANSION</strong><span>Integrations, apps &amp; partnerships.</span></li>
+              <li><strong>GLOBAL REACH</strong><span>Broader real-world adoption.</span></li>
+              <li><strong>THE NEXT ERA</strong><span>Evolving digital infrastructure.</span></li>
+            </ul>
           </div>
         </div>
-        <div class="roadmap-cta"><a href="#roadmap" class="liquid-btn"><span>VIEW FULL ROADMAP</span><span class="arrow">→</span></a></div>
+        <div class="rm-cta"><a href="#roadmap" class="btn btn-gold">VIEW FULL ROADMAP →</a></div>
       </div>
     </section>
 
+    <!-- TECHNOLOGY 3 panels -->
     <section class="technology" id="technology">
-      <div class="section-inner tech-grid">
-        <article class="tech-panel" id="tokenomics">
-          <div class="panel-header"><h3>TOKENOMICS</h3></div>
-          <div class="token-viz" aria-hidden="true"><div class="token-ring r1"></div><div class="token-ring r2"></div><div class="token-core"></div></div>
-          <p>A disciplined economic architecture designed to align participation, long-term ecosystem growth and sustainable value creation.</p>
-          <a href="#tokenomics" class="liquid-btn small"><span>EXPLORE TOKENOMICS</span><span class="arrow">→</span></a>
+      <div class="tech-grid">
+        <article class="tech-card tech-token" id="tokenomics">
+          <h3>TOKENOMICS</h3>
+          <div class="token-ring" aria-hidden="true"></div>
+          <p>Disciplined economic architecture aligned with long-term ecosystem growth and sustainable value creation.</p>
+          <a href="#tokenomics" class="btn btn-gold sm">VIEW DETAILS →</a>
         </article>
-        <article class="tech-panel solana-panel">
-          <div class="panel-header"><h3>BUILT ON</h3><div class="solana-logo">SOLANA</div></div>
-          <p>Powered by high-performance blockchain infrastructure engineered for speed, scalability and a seamless digital economy.</p>
-          <a href="#technology" class="liquid-btn small"><span>EXPLORE INFRASTRUCTURE</span><span class="arrow">→</span></a>
+        <article class="tech-card tech-solana">
+          <h3>BUILT ON</h3>
+          <div class="solana-word">SOLANA</div>
+          <p>High performance. Low fees. Limitless scalability. Built for mass adoption.</p>
+          <a href="#technology" class="btn btn-violet sm">LEARN MORE →</a>
         </article>
-        <article class="tech-panel">
-          <div class="panel-header"><h3>THE ANGELA TECHNOLOGY</h3></div>
-          <ul class="tech-list"><li>AI-POWERED</li><li>SMART CONTRACTS</li><li>SECURE INFRASTRUCTURE</li><li>SCALABLE ARCHITECTURE</li><li>DECENTRALIZED SYSTEMS</li></ul>
-          <a href="#technology" class="liquid-btn small"><span>EXPLORE TECHNOLOGY</span><span class="arrow">→</span></a>
+        <article class="tech-card tech-stack">
+          <h3>OUR TECHNOLOGY</h3>
+          <ul>
+            <li>AI-Powered Infrastructure</li>
+            <li>Smart Contracts</li>
+            <li>Ultra Fast &amp; Secure</li>
+            <li>Decentralized</li>
+            <li>Scalable &amp; Sustainable</li>
+          </ul>
+          <a href="#technology" class="btn btn-blue sm">EXPLORE TECH →</a>
         </article>
       </div>
     </section>
 
-    <section class="team-community" id="team">
-      <div class="section-inner team-comm-grid">
-        <div class="team-block">
-          <h2 class="section-title">MEET THE ANGELA TEAM</h2>
-          <p class="section-subtitle">BUILDERS. INNOVATORS. VISIONARIES.</p>
-          <div class="team-grid">
-            <article class="team-card">
-              <div class="team-portrait"><img src="assets/team/Emelienatam_ceo.webp" loading="lazy" decoding="async" alt="Emelie Natam" width="96" height="96" /></div>
-              <h3>EMELIE NATAM</h3><span class="role">CEO</span>
-              <a href="https://x.com/emelieceo" target="_blank" rel="noopener noreferrer" class="team-social">X</a>
+    <!-- TEAM + COMMUNITY -->
+    <section class="team-comm" id="team">
+      <div class="tc-grid">
+        <div class="team-panel">
+          <h2>MEET THE ANGELA TEAM</h2>
+          <p class="sub">Builders. Innovators. Visionaries.</p>
+          <div class="team-row">
+            <article class="member">
+              <img src="assets/team/Emelienatam_ceo.webp" alt="Emelie Natam" loading="lazy" width="120" height="120" />
+              <h3>EMELIE NATAM</h3>
+              <span>CEO</span>
+              <a href="https://x.com/emelieceo" target="_blank" rel="noopener noreferrer">X</a>
             </article>
-            <article class="team-card">
-              <div class="team-portrait"><img src="assets/team/Elenawilson_cto.webp" loading="lazy" decoding="async" alt="Elena Wilson" width="96" height="96" /></div>
-              <h3>ELENA WILSON</h3><span class="role">CTO</span>
-              <a href="https://x.com/Elenacto" target="_blank" rel="noopener noreferrer" class="team-social">X</a>
+            <article class="member">
+              <img src="assets/team/Elenawilson_cto.webp" alt="Elena Wilson" loading="lazy" width="120" height="120" />
+              <h3>ELENA WILSON</h3>
+              <span>CTO</span>
+              <a href="https://x.com/Elenacto" target="_blank" rel="noopener noreferrer">X</a>
             </article>
-            <article class="team-card">
-              <div class="team-portrait"><img src="assets/team/Alexarodriguez_uiux.webp" loading="lazy" decoding="async" alt="Alexa Rodriguez" width="96" height="96" /></div>
-              <h3>ALEXA RODRIGUEZ</h3><span class="role">UI / UX</span>
-              <a href="https://x.com/Alexauiux" target="_blank" rel="noopener noreferrer" class="team-social">X</a>
+            <article class="member">
+              <img src="assets/team/Alexarodriguez_uiux.webp" alt="Alexa Rodriguez" loading="lazy" width="120" height="120" />
+              <h3>ALEXA RODRIGUEZ</h3>
+              <span>UI / UX</span>
+              <a href="https://x.com/Alexauiux" target="_blank" rel="noopener noreferrer">X</a>
             </article>
           </div>
         </div>
-        <div class="community-block" id="community">
-          <h2 class="section-title">ENTER THE COMMUNITY</h2>
-          <p class="section-subtitle">BE PART OF THE MOVEMENT.</p>
-          <div class="community-portals">
-            <a href="https://x.com/Angelaxai" target="_blank" rel="noopener noreferrer" class="portal">
-              <div class="portal-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.792l7.719-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
-              <div class="portal-text"><span class="portal-name">X</span><span class="portal-desc">LATEST UPDATES</span></div>
+        <div class="comm-panel" id="community">
+          <h2>JOIN OUR COMMUNITY</h2>
+          <p class="sub">Be part of the movement.</p>
+          <div class="comm-links">
+            <a href="https://x.com/Angelaxai" target="_blank" rel="noopener noreferrer" class="comm-card">
+              <span class="comm-ico">𝕏</span>
+              <strong>Twitter</strong>
+              <small>Latest Updates</small>
             </a>
-            <a href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer" class="portal">
-              <div class="portal-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 14.5l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></div>
-              <div class="portal-text"><span class="portal-name">TELEGRAM</span><span class="portal-desc">JOIN THE COMMUNITY</span></div>
+            <a href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer" class="comm-card">
+              <span class="comm-ico">✈</span>
+              <strong>Telegram</strong>
+              <small>Join the Community</small>
             </a>
-            <a href="https://youtube.com/@angelaxai" target="_blank" rel="noopener noreferrer" class="portal">
-              <div class="portal-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4L15.8 12l-6.3 3.6z"/></svg></div>
-              <div class="portal-text"><span class="portal-name">YOUTUBE</span><span class="portal-desc">WATCH & LEARN</span></div>
+            <a href="https://youtube.com/@angelaxai" target="_blank" rel="noopener noreferrer" class="comm-card">
+              <span class="comm-ico">▶</span>
+              <strong>YouTube</strong>
+              <small>Watch &amp; Learn</small>
             </a>
           </div>
         </div>
@@ -210,21 +218,20 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo"><img src="assets/logo.webp/Logo1.png" alt="ANGELA" class="logo-mark" width="32" height="32" /><span class="logo-text">ANGELA</span></div>
-        <p class="footer-tagline">THE INTELLIGENCE LAYER<br />FOR THE NEXT DIGITAL ERA.</p>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo"><img src="assets/logo.webp/Logo1.png" alt="" class="logo-mark" width="28" height="28" /><span class="logo-text">ANGELA</span></div>
+        <p>BEYOND IMAGINATION.<br />BEYOND LIMITS.<br />BUILT FOR THE NEXT ERA.</p>
       </div>
-      <div class="footer-links">
-        <div class="footer-col"><h4>EXPLORE</h4><a href="#ecosystem">Vision</a><a href="#ecosystem">Ecosystem</a><a href="#roadmap">Roadmap</a><a href="#tokenomics">Tokenomics</a></div>
-        <div class="footer-col"><h4>COMPANY</h4><a href="#about">About</a><a href="#principles">Principles</a><a href="#technology">Technology</a><a href="#team">Team</a></div>
-        <div class="footer-col"><h4>RESOURCES</h4><a href="#roadmap">Whitepaper</a><a href="#technology">Docs</a><a href="#community">Support</a></div>
-        <div class="footer-col"><h4>COMMUNITY</h4><a href="https://x.com/Angelaxai" target="_blank" rel="noopener noreferrer">X</a><a href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://youtube.com/@angelaxai" target="_blank" rel="noopener noreferrer">YouTube</a></div>
+      <div class="foot-cols">
+        <div><h4>QUICK LINKS</h4><a href="#hero">Home</a><a href="#about">About</a><a href="#ecosystem">Ecosystem</a><a href="#roadmap">Roadmap</a><a href="#tokenomics">Tokenomics</a></div>
+        <div><h4>RESOURCES</h4><a href="#roadmap">Whitepaper</a><a href="#technology">Docs</a><a href="#community">Support</a></div>
+        <div><h4>COMMUNITY</h4><a href="https://x.com/Angelaxai" target="_blank" rel="noopener noreferrer">X</a><a href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://youtube.com/@angelaxai" target="_blank" rel="noopener noreferrer">YouTube</a></div>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="foot-bottom">
       <p>© 2026 ANGELA. All rights reserved.</p>
-      <div class="legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Policy</a></div>
+      <div><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Policy</a></div>
     </div>
   </footer>
 
