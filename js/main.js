@@ -1,5 +1,5 @@
 /**
- * ANGELA — Core interactions
+ * ANGELA — Core interactions (loader, header, cursor, carousel, reveal, newsletter)
  * Static marketing site: no user-generated HTML, no eval, no remote script injection.
  */
 (function () {
@@ -155,30 +155,27 @@
 
   function updateCarousel() {
     if (!track) return;
-    var cards = track.children;
-    var dots = dotsEl ? dotsEl.children : [];
-    var total = cards.length;
+    var cards = track.children, dots = dotsEl ? dotsEl.children : [], total = cards.length;
+    var cw = carouselEl.clientWidth, small = cw < 700, gap = 10;
+    var aw = small ? 150 : 220;
+    var sw = small ? 84 : Math.min(120, Math.max(80, (cw - aw) / 8 - gap));
+    carouselEl.style.setProperty('--aw', aw + 'px');
+    carouselEl.style.setProperty('--sw', sw + 'px');
     for (var i = 0; i < total; i++) {
       var offset = i - active;
       if (offset > total / 2) offset -= total;
       if (offset < -total / 2) offset += total;
-      var abs = Math.abs(offset);
-      var isActive = offset === 0;
-      var x = offset * 200;
-      var z = isActive ? 80 : -abs * 60;
-      var scale = isActive ? 1.15 : Math.max(0.7, 1 - abs * 0.12);
-      var opacity = isActive ? 1 : Math.max(0.22, 1 - abs * 0.28);
-      var rotateY = offset * -18;
-      var blur = isActive ? 0 : Math.min(4, abs * 1.2);
+      var abs = Math.abs(offset), isActive = offset === 0;
+      var x = isActive ? 0 : (offset < 0 ? -1 : 1) * (aw / 2 + gap + sw / 2 + (abs - 1) * (sw + gap));
       var card = cards[i];
-      card.style.transform = 'translateX(' + x + 'px) translateZ(' + z + 'px) rotateY(' + rotateY + 'deg) scale(' + scale + ')';
-      card.style.opacity = String(opacity);
-      card.style.filter = blur > 0 ? 'blur(' + blur + 'px)' : 'none';
+      card.style.transform = 'translateX(' + x + 'px) translateZ(' + (isActive ? 60 : 0) + 'px) rotateY(' + (offset * -5) + 'deg)';
+      card.style.opacity = String(abs > 4 ? 0 : 1 - abs * 0.1);
       card.style.zIndex = String(isActive ? 20 : 10 - abs);
       card.classList.toggle('active', isActive);
       if (dots[i]) dots[i].classList.toggle('active', isActive);
     }
   }
+  window.addEventListener('resize', updateCarousel);
 
   function goTo(i) {
     var n = CARDS.length;
@@ -225,31 +222,25 @@
 
   buildCarousel();
 
-  /* Scroll reveal */
-  if (!prefersReduced && 'IntersectionObserver' in window) {
-    var revealEls = document.querySelectorAll('.principle-card, .tech-panel, .team-card, .portal, .roadmap-item, .about-content, .metrics-track');
-    for (var r = 0; r < revealEls.length; r++) revealEls[r].classList.add('reveal');
-    var io = new IntersectionObserver(function (entries) {
-      for (var i = 0; i < entries.length; i++) {
-        if (entries[i].isIntersecting) {
-          entries[i].target.classList.add('visible');
-          io.unobserve(entries[i].target);
-        }
-      }
-    }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
-    var nodes = document.querySelectorAll('.reveal');
-    for (var n = 0; n < nodes.length; n++) io.observe(nodes[n]);
-  }
+  var nf=document.getElementById('newsForm');
+  if(nf)nf.addEventListener('submit',function(e){e.preventDefault();document.getElementById('newsMsg').textContent='Newsletter opens soon.';});
 
-  /* Hero parallax — transform only */
-  if (!prefersReduced && !isTouch) {
-    var wrap = document.querySelector('.hero-image-wrap');
-    if (wrap) {
-      window.addEventListener('mousemove', function (e) {
-        var x = (e.clientX / window.innerWidth - 0.5) * 10;
-        var y = (e.clientY / window.innerHeight - 0.5) * 6;
-        wrap.style.transform = 'translateY(' + (y * 0.35) + 'px) rotateY(' + (x * 0.3) + 'deg)';
-      }, { passive: true });
-    }
+  /* Scroll reveal — targets real sections; class removed after the entrance so hover transforms keep working */
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    var targets = document.querySelectorAll('.about-copy,.metrics-row,.roadmap-content,.tech-card,.team-panel,.comm-panel,.member');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var t = en.target;
+        t.classList.add('visible');
+        io.unobserve(t);
+        setTimeout(function () { t.classList.remove('reveal', 'visible'); }, 1400);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach(function (t, i) {
+      t.classList.add('reveal');
+      t.style.setProperty('--d', (i % 3) * 90 + 'ms');
+      io.observe(t);
+    });
   }
 })();
