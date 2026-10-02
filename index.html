@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ANGELA — landing page · structure only; visuals in style.css, behaviour in js/ -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -16,11 +17,14 @@
   <link rel="apple-touch-icon" href="assets/logo.webp/Logo1.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/hero/file_hero.png" fetchpriority="high" />
   <link rel="stylesheet" href="style.css" />
+  <noscript><style>.loader{display:none}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ANGELA","logo":"assets/logo.webp/Logo1.png","sameAs":["https://x.com/Angelaxai","https://t.me/angelaCommunity","https://youtube.com/@angelaxai"]}</script>
 </head>
 <body>
-  <canvas id="site-lightfall" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="cursor" id="cursor" hidden></div>
   <div class="cursor-trail" id="cursorTrail" hidden></div>
 
@@ -37,7 +41,7 @@
     <a href="#ecosystem" class="enter-btn">ENTER ANGELA <span aria-hidden="true">→</span></a>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO — full-bleed image, text + CTAs overlaid -->
     <section class="hero" id="hero">
       <div class="hero-media" aria-hidden="true">
@@ -46,7 +50,7 @@
       </div>
       <div class="hero-copy">
         <h1 class="hero-title">ANGELA</h1>
-        <p class="hero-tagline">BEYOND IMAGINATION.<br />BEYOND LIMITS.<br />BUILT FOR THE NEXT ERA.</p>
+        <p class="hero-tagline">BEYOND IMAGINATION.<br />BEYOND LIMITS.<br /><span class="gold">BUILT FOR THE NEXT ERA.</span></p>
         <p class="hero-desc">ANGELA is the intelligence layer powering a new world of ownership, connection, and endless possibilities.</p>
         <div class="hero-ctas">
           <a href="#ecosystem" class="btn btn-gold">EXPLORE ANGELA</a>
@@ -62,7 +66,7 @@
       <div class="ecosystem-bg" aria-hidden="true"></div>
       <div class="eco-inner">
         <button class="eco-nav prev" id="carouselPrev" type="button" aria-label="Previous">‹</button>
-        <div class="carousel" id="carousel" tabindex="0">
+        <div class="carousel" id="carousel" tabindex="0" role="region" aria-roledescription="carousel" aria-label="ANGELA ecosystem">
           <div class="carousel-track" id="carouselTrack"></div>
         </div>
         <button class="eco-nav next" id="carouselNext" type="button" aria-label="Next">›</button>
@@ -141,13 +145,13 @@
       <div class="tech-grid">
         <article class="tech-card tech-token" id="tokenomics">
           <h3>TOKENOMICS</h3>
-          <div class="token-ring" aria-hidden="true"></div>
+          <div class="token-wrap"><div class="token-ring" aria-hidden="true"></div><ul class="legend"><li><i style="background:#3b82f6"></i><b>40%</b> Community</li><li><i style="background:#4f46e5"></i><b>20%</b> Ecosystem</li><li><i style="background:#e4577a"></i><b>15%</b> Marketing</li><li><i style="background:#a23a73"></i><b>15%</b> Team</li><li><i style="background:#D6AD4D"></i><b>10%</b> Treasury</li></ul></div>
           <p>Disciplined economic architecture aligned with long-term ecosystem growth and sustainable value creation.</p>
           <a href="#tokenomics" class="btn btn-gold sm">VIEW DETAILS →</a>
         </article>
         <article class="tech-card tech-solana">
           <h3>BUILT ON</h3>
-          <div class="solana-word">SOLANA</div>
+          <div class="solana-word"><svg viewBox="0 0 40 32" aria-hidden="true"><defs><linearGradient id="sg"><stop offset="0" stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs><path fill="url(#sg)" d="M7 0h33l-7 8H0zM0 12h33l7 8H7zM7 24h33l-7 8H0z" transform="scale(1 .95)"/></svg><span>SOLANA</span></div>
           <p>High performance. Low fees. Limitless scalability. Built for mass adoption.</p>
           <a href="#technology" class="btn btn-violet sm">LEARN MORE →</a>
         </article>
@@ -197,17 +201,17 @@
           <p class="sub">Be part of the movement.</p>
           <div class="comm-links">
             <a href="https://x.com/Angelaxai" target="_blank" rel="noopener noreferrer" class="comm-card">
-              <span class="comm-ico">𝕏</span>
+              <span class="comm-ico ico-x"><img src="assets/icons/X.png" alt="" width="54" height="54" loading="lazy" /></span>
               <strong>Twitter</strong>
               <small>Latest Updates</small>
             </a>
             <a href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer" class="comm-card">
-              <span class="comm-ico">✈</span>
+              <span class="comm-ico ico-tg"><img src="assets/icons/Telgram.png" alt="" width="54" height="54" loading="lazy" /></span>
               <strong>Telegram</strong>
               <small>Join the Community</small>
             </a>
             <a href="https://youtube.com/@angelaxai" target="_blank" rel="noopener noreferrer" class="comm-card">
-              <span class="comm-ico">▶</span>
+              <span class="comm-ico ico-yt"><img src="assets/icons/Youtube.png" alt="" width="54" height="54" loading="lazy" /></span>
               <strong>YouTube</strong>
               <small>Watch &amp; Learn</small>
             </a>
@@ -228,6 +232,7 @@
         <div><h4>RESOURCES</h4><a href="#roadmap">Whitepaper</a><a href="#technology">Docs</a><a href="#community">Support</a></div>
         <div><h4>COMMUNITY</h4><a href="https://x.com/Angelaxai" target="_blank" rel="noopener noreferrer">X</a><a href="https://t.me/angelaCommunity" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://youtube.com/@angelaxai" target="_blank" rel="noopener noreferrer">YouTube</a></div>
       </div>
+      <form class="foot-news" id="newsForm"><h4>NEWSLETTER</h4><p>Stay updated with the latest news and announcements.</p><div><input type="email" placeholder="Enter your email" aria-label="Email" required /><button type="submit" aria-label="Subscribe">→</button></div><small id="newsMsg"></small></form>
     </div>
     <div class="foot-bottom">
       <p>© 2026 ANGELA. All rights reserved.</p>
