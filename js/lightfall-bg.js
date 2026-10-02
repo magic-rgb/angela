@@ -123,7 +123,7 @@
       // Keep restrained so section images/content stay dominant
       col = clamp(col, 0.0, 1.0) * 0.85;
 
-      gl_FragColor = vec4(col, 0.55);
+      gl_FragColor = vec4(col * 0.55, 0.55);
     }
   `;
 
@@ -207,11 +207,12 @@
 
   document.addEventListener('visibilitychange', () => {
     visible = document.visibilityState === 'visible';
+    if (visible && !raf) raf = requestAnimationFrame(frame);
   });
 
   function frame(now) {
+    if (!visible) { raf = 0; return; }
     raf = requestAnimationFrame(frame);
-    if (!visible) return;
     const t = (now - start) * 0.001;
     gl.uniform1f(uTime, t);
     gl.uniform2f(uMouse, mouse[0], mouse[1]);
