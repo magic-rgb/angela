@@ -959,3 +959,17 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:auto}
 .foot-mark{-webkit-text-stroke:1px rgba(214,173,77,.1)}
 .foot-bottom{padding:1.1rem 0 0;border:0;border-top:1px solid rgba(214,173,77,.3)}
 @media(max-width:1100px){.foot-top{grid-template-columns:1fr;gap:1.6rem}.foot-top>*{padding:0}.foot-top>*+*{border-left:0;border-top:1px solid rgba(214,173,77,.25);padding-top:1.4rem}}
+
+/* ===== v8 · team + community side by side on PC ===== */
+.tc-grid{grid-template-columns:1fr 1.35fr;align-items:stretch;gap:1.2rem}
+.team-panel{display:flex;flex-direction:column}
+.team-row{max-width:none;margin:0;flex:1;align-content:center;gap:.7rem}
+.team-comm .mini-stage{margin:0;max-width:none;width:100%;align-self:start}
+@media(min-width:761px){
+  .mini-title{font-size:5.4cqw}.mini-title span{font-size:2.3cqw}
+  .mini-tag{font-size:2.2cqw}
+  .mini-feats li{font-size:1.1cqw}.mini-feats i{width:4.6cqw;height:4.6cqw}
+  .mini-btn{font-size:2cqw;padding:1.4cqw 1cqw}
+  .mini-sub{font-size:1.1cqw}
+}
+@media(max-width:1100px){.tc-grid{grid-template-columns:1fr}.team-row{max-width:760px;margin:0 auto;flex:none}}
