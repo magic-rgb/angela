@@ -186,7 +186,7 @@
       var abs = Math.abs(offset), isActive = offset === 0;
       var x = isActive ? 0 : (offset < 0 ? -1 : 1) * (aw / 2 + gap + sw / 2 + (abs - 1) * (sw + gap));
       var card = cards[i];
-      card.style.transform = 'translateX(' + x + 'px) translateZ(' + (isActive ? 60 : 0) + 'px) rotateY(' + (offset * -5) + 'deg)';
+      card.style.transform = 'translateX(' + x + 'px)';
       card.style.opacity = String(abs > 4 ? 0 : 1 - abs * 0.1);
       card.style.zIndex = String(isActive ? 20 : 10 - abs);
       card.classList.toggle('active', isActive);
