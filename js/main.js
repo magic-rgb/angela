@@ -244,3 +244,26 @@
     });
   }
 })();
+
+/* Technology + Solana cards: text colour follows the pointer */
+(function () {
+  var cards = document.querySelectorAll('.tech-stack, .tech-solana');
+  if (!cards.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  cards.forEach(function (card) {
+    var spots = card.querySelectorAll('.tech-title, .sol-head h3, .sol-feats b, .sol-foot b, .tech-stack li');
+    card.addEventListener('pointermove', function (e) {
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mxp', ((e.clientX - r.left) / r.width).toFixed(3));
+      card.style.setProperty('--myp', ((e.clientY - r.top) / r.height).toFixed(3));
+      spots.forEach(function (el) {
+        var b = el.getBoundingClientRect();
+        el.style.setProperty('--tx', (e.clientX - b.left) + 'px');
+        el.style.setProperty('--ty', (e.clientY - b.top) + 'px');
+      });
+    });
+    card.addEventListener('pointerleave', function () {
+      ['--mxp', '--myp'].forEach(function (p) { card.style.removeProperty(p); });
+      spots.forEach(function (el) { el.style.removeProperty('--tx'); el.style.removeProperty('--ty'); });
+    });
+  });
+})();
