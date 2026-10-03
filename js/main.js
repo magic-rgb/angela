@@ -5,6 +5,9 @@
 (function () {
   'use strict';
 
+  /* artwork in assets/og/ (file names exactly as in the repo, incl. 'Scurity') */
+  var ART = ['Vision', 'Ecosystem', 'Aicore', 'Wallet', 'Roadmap', 'Tokenomics', 'Scurity', 'Staking', 'Community', 'Future'];
+  var TAGS = ['Beyond imagination', 'One connected world', 'The intelligence layer', 'Your assets, secured', 'From launch to legacy', 'Built to last', 'Protected by design', 'Grow with the network', 'Stronger together', 'The next era'];
   var CARDS = [
     { num: '01', title: 'VISION', icon: 'eye' },
     { num: '02', title: 'ECOSYSTEM', icon: 'globe' },
@@ -128,11 +131,26 @@
         tabindex: '0',
         'aria-label': c.num + ' ' + c.title
       });
+      var art = el('img', {
+        className: 'card-art',
+        src: 'assets/og/' + ART[i] + '.png',
+        alt: '',
+        loading: 'lazy',
+        decoding: 'async'
+      });
+      art.addEventListener('load', function () { card.classList.add('has-art'); });
+      art.addEventListener('error', function () { art.remove(); });
+      card.appendChild(art);
+      card.appendChild(el('span', { className: 'card-scrim' }));
       card.appendChild(el('span', { className: 'card-num', text: c.num }));
       var iconWrap = el('div', { className: 'card-icon' });
       iconWrap.appendChild(svgIcon(c.icon));
       card.appendChild(iconWrap);
-      card.appendChild(el('span', { className: 'card-title', text: c.title }));
+      var txt = el('div', { className: 'card-text' });
+      txt.appendChild(el('i', { className: 'card-line' }));
+      txt.appendChild(el('span', { className: 'card-title', text: c.title }));
+      txt.appendChild(el('span', { className: 'card-tag', text: TAGS[i] }));
+      card.appendChild(txt);
       card.addEventListener('click', function () { goTo(i); });
       card.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -245,25 +263,3 @@
   }
 })();
 
-/* Technology + Solana cards: text colour follows the pointer */
-(function () {
-  var cards = document.querySelectorAll('.tech-stack, .tech-solana');
-  if (!cards.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  cards.forEach(function (card) {
-    var spots = card.querySelectorAll('.tech-title, .sol-head h3, .sol-feats b, .sol-foot b, .tech-stack li');
-    card.addEventListener('pointermove', function (e) {
-      var r = card.getBoundingClientRect();
-      card.style.setProperty('--mxp', ((e.clientX - r.left) / r.width).toFixed(3));
-      card.style.setProperty('--myp', ((e.clientY - r.top) / r.height).toFixed(3));
-      spots.forEach(function (el) {
-        var b = el.getBoundingClientRect();
-        el.style.setProperty('--tx', (e.clientX - b.left) + 'px');
-        el.style.setProperty('--ty', (e.clientY - b.top) + 'px');
-      });
-    });
-    card.addEventListener('pointerleave', function () {
-      ['--mxp', '--myp'].forEach(function (p) { card.style.removeProperty(p); });
-      spots.forEach(function (el) { el.style.removeProperty('--tx'); el.style.removeProperty('--ty'); });
-    });
-  });
-})();
