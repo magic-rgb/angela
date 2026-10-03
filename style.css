@@ -1049,3 +1049,85 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:auto}
 .tech-stack li{padding-left:1.1rem}
 .sol-feats b{white-space:nowrap;font-size:.52rem;letter-spacing:.09em}
 .sol-feats b,.sol-foot b{filter:hue-rotate(calc((var(--mxp,.5) - .5) * 90deg)) brightness(1.35) drop-shadow(0 2px 8px rgba(0,0,0,.85))}
+
+/* ===== v12 · no pointer halo · per-colour hover fills · shining words ===== */
+@keyframes txtShine{0%,28%{background-position:100% 0,0 0}72%,100%{background-position:0 0,0 0}}
+@keyframes liShine{from{background-position:100% 0,0 0}to{background-position:0 0,0 0}}
+/* TECHNOLOGY */
+.tech-card h3.tech-title{
+  background-image:linear-gradient(105deg,transparent 43%,rgba(255,250,225,.98) 50%,transparent 57%),linear-gradient(90deg,#ffd978,#fff3c9 28%,#7fe3ff 58%,#b79bff 85%,#ff9be0);
+  background-size:260% 100%,100% 100%;background-repeat:no-repeat;background-position:100% 0,0 0;
+  animation:txtShine 3.6s ease-in-out infinite;filter:drop-shadow(0 2px 10px rgba(0,0,0,.85))}
+/* option pills: each fills with its own colour + sweeping gloss on hover */
+.tech-stack li{--c:#4ec9ff;--sh:rgba(255,255,255,.65);
+  background:linear-gradient(105deg,transparent 42%,var(--sh) 50%,transparent 58%) 100% 0/260% 100% no-repeat,rgba(4,8,18,.62);
+  border-color:color-mix(in srgb,var(--c) 45%,transparent);box-shadow:none;transition:border-color .3s,box-shadow .3s,background-color .3s,transform .3s}
+.tech-stack li:nth-child(1){--c:#4ec9ff}.tech-stack li:nth-child(2){--c:#a78bfa}.tech-stack li:nth-child(3){--c:#f5c451}
+.tech-stack li:nth-child(4){--c:#ff5d8f}.tech-stack li:nth-child(5){--c:#14f195}
+.tech-stack li::after{background:var(--c)}
+.tech-stack li::before{background:var(--c);box-shadow:0 0 10px var(--c)}
+.tech-stack li:hover{transform:translateX(4px);color:#fff;border-color:var(--c);
+  background:linear-gradient(105deg,transparent 42%,color-mix(in srgb,var(--c) 35%,#fff) 50%,transparent 58%) 100% 0/260% 100% no-repeat,
+    linear-gradient(90deg,color-mix(in srgb,var(--c) 85%,#050a16),color-mix(in srgb,var(--c) 48%,#050a16));
+  box-shadow:0 0 20px color-mix(in srgb,var(--c) 55%,transparent),inset 0 0 14px color-mix(in srgb,var(--c) 25%,transparent);
+  animation:liShine .95s ease-in-out infinite}
+/* SOLANA */
+.tech-card.tech-solana h3{
+  background-image:linear-gradient(105deg,transparent 43%,rgba(225,255,250,.98) 50%,transparent 57%),linear-gradient(90deg,#2ff3d0,#5fd4ff 30%,#7f9bff 55%,#b36bff 80%,#ff8bf0);
+  background-size:260% 100%,100% 100%;background-repeat:no-repeat;background-position:100% 0,0 0;
+  animation:txtShine 3.6s ease-in-out infinite;filter:drop-shadow(0 0 14px rgba(122,167,255,.5))}
+.sol-foot b{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:#e8edff;color:#e8edff;filter:none;font-weight:500}
+.sol-word{font-style:normal;font-weight:700;letter-spacing:.38em;margin-right:-.38em;
+  background-image:linear-gradient(105deg,transparent 43%,rgba(225,255,250,.98) 50%,transparent 57%),linear-gradient(90deg,#2ff3d0,#7f9bff 55%,#b36bff);
+  background-size:260% 100%,100% 100%;background-repeat:no-repeat;background-position:100% 0,0 0;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:txtShine 3.6s ease-in-out infinite;animation-delay:.6s;filter:drop-shadow(0 0 8px rgba(95,212,255,.55))}
+.sol-feats b{filter:drop-shadow(0 2px 8px rgba(0,0,0,.85)) brightness(1.2)}
+.sol-feats li:nth-child(1) b{background-image:linear-gradient(90deg,#2ff3d0,#7fe3ff)}
+.sol-feats li:nth-child(2) b{background-image:linear-gradient(90deg,#7fb2ff,#9a8cff)}
+.sol-feats li:nth-child(3) b{background-image:linear-gradient(90deg,#b985ff,#ff8bf0)}
+.sol-feats b{background-size:100% 100%;background-position:0 0}
+.tech-card.tech-solana,.tech-stack{--mxp:.5}
+@media(prefers-reduced-motion:reduce){.tech-title,.tech-solana h3,.sol-word,.tech-stack li:hover{animation:none!important}}
+
+/* ===== v13 · Solana: gold ANGELA labels, text block slightly lower ===== */
+.sol-feats{top:83%}
+.sol-feats li:nth-child(1) b,.sol-feats li:nth-child(2) b,.sol-feats li:nth-child(3) b{
+  background-image:linear-gradient(90deg,#fff1c1,#f5c451 45%,#d6a437 100%);
+  filter:drop-shadow(0 0 8px rgba(245,196,81,.45)) drop-shadow(0 2px 6px rgba(0,0,0,.85))}
+.sol-feats li:nth-child(1) b,.sol-feats li:nth-child(2) b,.sol-feats li:nth-child(3) b{
+  background-image:linear-gradient(90deg,#fff6d6,#ffd966 45%,#f2b93b 100%);
+  filter:brightness(1.25) drop-shadow(0 0 8px rgba(255,205,80,.55)) drop-shadow(0 2px 6px rgba(0,0,0,.85))}
+
+/* ===== v14 · carousel cards use artwork from assets/og/ (fills the whole card) ===== */
+.carousel-card{overflow:hidden}
+.carousel-card .card-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;pointer-events:none;user-select:none}
+.carousel-card.has-art .card-icon{display:none}
+.carousel-card .card-num,.carousel-card .card-title{position:relative;z-index:3;text-shadow:0 2px 10px #000,0 0 4px rgba(0,0,0,.9)}
+.carousel-card.has-art .card-title{margin-top:auto;padding-bottom:.15rem}
+.carousel-card.has-art .card-num{color:var(--gold-hi);opacity:1}
+.carousel-card:not(.active) .card-title{font-size:.64rem;letter-spacing:.05em;white-space:nowrap}
+@media(max-width:700px){.carousel-card:not(.active) .card-title{font-size:.55rem;letter-spacing:.03em}}
+
+/* ===== v15 · luxury card typography (artwork has no text) ===== */
+.carousel-card .card-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top,rgba(2,4,10,.55),rgba(2,4,10,0) 38%),linear-gradient(to bottom,rgba(2,4,10,.3),rgba(2,4,10,0) 20%)}
+.carousel-card .card-num{display:flex;align-items:center;gap:.4rem;font-family:var(--display);font-size:.78rem;letter-spacing:.3em;font-weight:500;color:#ffe9a8;opacity:1;text-shadow:0 0 12px rgba(245,196,81,.7),0 2px 8px #000}
+.carousel-card .card-num::after{content:"";width:18px;height:1px;background:linear-gradient(90deg,#f5d77c,transparent)}
+.carousel-card.active .card-num{font-size:1.05rem}
+.carousel-card.active .card-num::after{width:34px}
+.carousel-card .card-text{position:relative;z-index:3;width:100%;margin-top:auto;text-align:center;padding-bottom:.2rem}
+.carousel-card .card-line{display:block;position:relative;width:30px;height:1px;margin:0 auto .5rem;background:linear-gradient(90deg,transparent,#f5d77c,transparent);transition:width .4s var(--ease)}
+.carousel-card .card-line::after{content:"";position:absolute;left:50%;top:50%;width:5px;height:5px;margin:-2.5px;transform:rotate(45deg);background:#ffd966;box-shadow:0 0 8px #ffd966}
+.carousel-card.active .card-line{width:96px}
+.carousel-card .card-title{display:block;margin:0;font-family:var(--display);font-weight:600;
+  background:linear-gradient(180deg,#fff8dc,#ffd966 55%,#d6a437);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.9))}
+.carousel-card.active .card-title{font-size:1.4rem;letter-spacing:.2em;padding-left:.2em;
+  background-image:linear-gradient(105deg,transparent 43%,rgba(255,255,255,.98) 50%,transparent 57%),linear-gradient(180deg,#fff8dc,#ffd966 55%,#d6a437);
+  background-size:260% 100%,100% 100%;background-repeat:no-repeat;background-position:100% 0,0 0;animation:txtShine 3.6s ease-in-out infinite;
+  filter:drop-shadow(0 0 12px rgba(255,205,80,.5)) drop-shadow(0 2px 6px rgba(0,0,0,.9))}
+.carousel-card .card-tag{display:block;max-height:0;overflow:hidden;opacity:0;font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:#eaf0ff;text-shadow:0 2px 8px #000;transition:opacity .5s .1s,max-height .5s,margin .5s}
+.carousel-card.active .card-tag{max-height:2.4em;opacity:1;margin-top:.55rem}
+@media(prefers-reduced-motion:reduce){.carousel-card.active .card-title{animation:none}}
+.carousel-card .card-num{order:1}
+.carousel-card .card-text{order:3}
