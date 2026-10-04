@@ -1210,3 +1210,45 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:auto}
 .metric strong{display:block;margin:0}
 .metric span{display:block;margin-top:.1rem}
 .metric .m-ico{width:54px;height:60px;flex:none}
+
+/* ===== v19 · Tokenomics card: raw artwork + live text ===== */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tech-token{position:relative;padding:0;overflow:hidden;container-type:inline-size;
+  background:
+    url(assets/team/Tokon.bg.png) center/cover no-repeat padding-box,
+    linear-gradient(#050a16,#03060e) padding-box,
+    conic-gradient(from var(--a),rgba(214,173,77,.15),#D6AD4D 12%,rgba(59,130,246,.2) 30%,#4ec9ff 45%,rgba(139,92,246,.2) 60%,#8b5cf6 75%,rgba(214,173,77,.15)) border-box}
+.tk-p{position:absolute;transform:translate(-50%,-50%);font-weight:600;font-size:3.4cqw;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.8),0 0 10px rgba(0,0,0,.5)}
+.tk-p1{left:42.2%;top:15.3%}.tk-p2{left:37.8%;top:19.6%}.tk-p3{left:35%;top:24.8%}
+.tk-p4{left:41.8%;top:32.5%;font-size:3.8cqw}.tk-p5{left:58%;top:27.3%;font-size:4.6cqw}
+.tk-supply{position:absolute;left:0;right:0;top:46.5%;text-align:center}
+.tk-supply small{display:flex;align-items:center;justify-content:center;gap:2.6cqw;font-family:var(--display);font-size:2.3cqw;letter-spacing:.42em;padding-left:.42em;color:#ffd77a;text-shadow:0 2px 8px #000}
+.tk-supply small::before,.tk-supply small::after{content:"";width:9cqw;height:1px;background:linear-gradient(90deg,transparent,#ffd966)}
+.tk-supply small::after{background:linear-gradient(90deg,#ffd966,transparent)}
+.tk-supply strong{display:block;margin-top:.5cqw;font-family:var(--display);font-weight:600;font-size:7.4cqw;letter-spacing:.02em;line-height:1.1;
+  background-image:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%),linear-gradient(180deg,#fff6d6,#ffd966 50%,#d6a437);
+  background-size:260% 100%,100% 100%;background-repeat:no-repeat;background-position:100% 0,0 0;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:txtShine 3.6s ease-in-out infinite;
+  filter:drop-shadow(0 0 12px rgba(255,190,60,.5)) drop-shadow(0 2px 6px rgba(0,0,0,.9))}
+.tk-supply em{font-style:normal;font-size:2.6cqw;letter-spacing:.2em;-webkit-text-fill-color:#ffd77a;color:#ffd77a}
+.tk-rows{position:absolute;left:7%;right:7%;top:57%;list-style:none;margin:0;padding:0;display:grid;gap:1.1cqw}
+.tk-rows li{position:relative;display:grid;grid-template-columns:5.2cqw 1fr auto;column-gap:2.4cqw;align-items:center;padding-bottom:1.5cqw}
+.tk-rows i{width:5.2cqw;height:6cqw;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:linear-gradient(160deg,#fff,var(--c) 45%,color-mix(in srgb,var(--c) 45%,#000));box-shadow:0 0 10px var(--c)}
+.tk-rows b{display:block;font-weight:500;font-size:2.55cqw;color:#fff;line-height:1.15;text-shadow:0 1px 5px #000}
+.tk-rows span{display:block;font-size:2cqw;color:color-mix(in srgb,var(--c) 70%,#fff);opacity:.9}
+.tk-rows em{font-style:normal;font-family:var(--display);font-weight:600;font-size:3.9cqw;color:var(--c);text-shadow:0 0 12px color-mix(in srgb,var(--c) 55%,transparent),0 1px 5px #000}
+.tk-rows u{position:absolute;left:7.6cqw;right:0;bottom:0;height:.9cqw;border-radius:9px;background:rgba(255,255,255,.1)}
+.tk-rows u::after{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);border-radius:inherit;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 60%,#fff),var(--c));box-shadow:0 0 8px var(--c)}
+.tk-facts{position:absolute;left:5%;right:5%;bottom:2.6%;display:grid;grid-template-columns:1fr 1fr;gap:1.2cqw}
+.tk-facts span{display:flex;align-items:center;gap:1.2cqw;padding:1.1cqw 1.8cqw;font-size:1.85cqw;line-height:1.2;color:#ecdcae;border:1px solid rgba(255,200,90,.5);border-radius:7px;background:rgba(4,8,18,.55);text-shadow:0 1px 4px #000}
+.tk-facts b{font-weight:600;color:#ffd966;font-size:2.3cqw}
+@media(max-width:1100px){.tech-token{aspect-ratio:415/516;max-width:460px;width:100%;margin:0 auto}}
+.tk-p5{left:61%}
+.tk-rows{top:52.5%;gap:.5cqw}
+.tk-rows li{padding-bottom:1cqw;grid-template-columns:4.6cqw 1fr auto}
+.tk-rows i{width:4.6cqw;height:5.2cqw}
+.tk-rows b{font-size:2.3cqw}.tk-rows span{font-size:1.75cqw}.tk-rows em{font-size:3.4cqw}
+.tk-rows u{left:7cqw;height:.8cqw}
+.tk-facts{gap:1cqw;bottom:2.4%}
+.tk-facts span{padding:.8cqw 1.6cqw;font-size:1.7cqw}.tk-facts b{font-size:2.1cqw}
+.tk-rows{top:58%}
