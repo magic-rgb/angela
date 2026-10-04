@@ -1252,3 +1252,46 @@ body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:auto}
 .tk-facts{gap:1cqw;bottom:2.4%}
 .tk-facts span{padding:.8cqw 1.6cqw;font-size:1.7cqw}.tk-facts b{font-size:2.1cqw}
 .tk-rows{top:58%}
+
+/* ===== v20 · tokenomics: engraved 3D numerals + faceted crystal gems ===== */
+.tk-p{font-family:var(--display);font-weight:700;letter-spacing:.02em;line-height:1;-webkit-text-fill-color:transparent;-webkit-background-clip:text;background-clip:text;
+  background-image:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%),linear-gradient(180deg,#fff 0%,#d4e9ff 45%,#7fb4ff 100%);
+  background-size:260% 100%,100% 100%;background-repeat:no-repeat;background-position:100% 0,0 0;animation:txtShine 4.2s ease-in-out infinite;
+  text-shadow:none;
+  filter:drop-shadow(0 1px 0 #16307a) drop-shadow(0 2px 0 #112766) drop-shadow(0 3px 0 #0c1d52) drop-shadow(0 4px 0 #0a1840) drop-shadow(0 6px 5px rgba(0,0,0,.7)) drop-shadow(0 0 10px rgba(110,170,255,.75))}
+.tk-p1{font-size:4cqw;transform:translate(-50%,-50%) perspective(260px) rotate(-15deg) rotateY(16deg)}
+.tk-p2{font-size:4cqw;transform:translate(-50%,-50%) perspective(260px) rotate(-31deg) rotateY(20deg);animation-delay:.5s}
+.tk-p3{font-size:4cqw;transform:translate(-50%,-50%) perspective(260px) rotate(-50deg) rotateY(22deg);animation-delay:1s}
+.tk-p4{font-size:4.6cqw;transform:translate(-50%,-50%) perspective(260px) rotate(30deg) rotateY(14deg);animation-delay:1.5s}
+.tk-p5{font-size:6.6cqw;transform:translate(-50%,-50%) perspective(300px) rotate(14deg) rotateY(-18deg);animation-delay:.8s;
+  background-image:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%),linear-gradient(180deg,#fffbe6 0%,#ffe08a 45%,#e0a22c 100%);
+  filter:drop-shadow(0 1px 0 #8a5a10) drop-shadow(0 2px 0 #7a4c0c) drop-shadow(0 3px 0 #653c08) drop-shadow(0 4px 0 #4f2e06) drop-shadow(0 7px 5px rgba(0,0,0,.7)) drop-shadow(0 0 12px rgba(255,190,60,.8))}
+/* crystal gems */
+.tk-rows li{grid-template-columns:5.6cqw 1fr auto}
+.tk-rows s{display:block;width:5.4cqw;height:6.2cqw;text-decoration:none;
+  filter:drop-shadow(0 0 4px var(--c)) drop-shadow(0 0 10px color-mix(in srgb,var(--c) 65%,transparent))}
+.tk-rows s i{position:relative;display:block;width:100%;height:100%;box-shadow:none;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  background:
+    linear-gradient(105deg,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%) 150% 0/250% 100% no-repeat,
+    conic-gradient(from 0deg at 50% 52%,
+      color-mix(in srgb,var(--c) 45%,#fff) 0 60deg,color-mix(in srgb,var(--c) 70%,#000) 60deg 120deg,
+      var(--c) 120deg 180deg,color-mix(in srgb,var(--c) 42%,#000) 180deg 240deg,
+      color-mix(in srgb,var(--c) 28%,#fff) 240deg 300deg,color-mix(in srgb,var(--c) 58%,#000) 300deg 360deg);
+  animation:gemGloss 3.4s ease-in-out infinite}
+.tk-rows s i::before{content:"";position:absolute;inset:23% 21%;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  background:linear-gradient(145deg,rgba(255,255,255,.95),color-mix(in srgb,var(--c) 55%,#fff) 38%,color-mix(in srgb,var(--c) 70%,#000) 100%);opacity:.92}
+.tk-rows s i::after{content:"";position:absolute;left:12%;top:10%;width:32%;height:32%;background:#fff;filter:blur(.2px);
+  clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:gemTwinkle 2.6s ease-in-out infinite}
+.tk-rows li:nth-child(2) s i,.tk-rows li:nth-child(2) s i::after{animation-delay:.6s}
+.tk-rows li:nth-child(3) s i,.tk-rows li:nth-child(3) s i::after{animation-delay:1.2s}
+.tk-rows li:nth-child(4) s i,.tk-rows li:nth-child(4) s i::after{animation-delay:1.8s}
+.tk-rows li:nth-child(5) s i,.tk-rows li:nth-child(5) s i::after{animation-delay:2.4s}
+.tk-rows u{left:8cqw}
+@keyframes gemGloss{0%,35%{background-position:150% 0,0 0}75%,100%{background-position:-50% 0,0 0}}
+@keyframes gemTwinkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.1)}}
+@media(prefers-reduced-motion:reduce){.tk-p,.tk-rows s i,.tk-rows s i::after{animation:none}}
+.tk-p{filter:drop-shadow(0 1px 0 #2a4fa8) drop-shadow(0 2px 0 #1a3585) drop-shadow(0 4px 4px rgba(0,0,0,.65)) drop-shadow(0 0 8px rgba(120,175,255,.7))}
+.tk-p1,.tk-p2,.tk-p3{font-size:4.4cqw}.tk-p4{font-size:5cqw}
+.tk-p5{filter:drop-shadow(0 1px 0 #b57a1c) drop-shadow(0 2px 0 #8a5a10) drop-shadow(0 4px 0 #5e3a08) drop-shadow(0 7px 5px rgba(0,0,0,.65)) drop-shadow(0 0 12px rgba(255,190,60,.8))}
+.tk-p1,.tk-p2,.tk-p3{font-size:4.1cqw}
+.tk-p2{left:38.8%;top:19.9%}.tk-p3{left:36.2%;top:25.4%}
